@@ -1,0 +1,23 @@
+// src/styles/_variables.scss
+
+// Variáveis de cores (CSS Variables para troca dinâmica via JS/Atributo)
+:root {
+  --bg-body: #ffffff;
+  --text-main: #1a1a1a;
+  --primary: #007aff; // Azul padrão
+  --card-bg: #f5f5f7;
+  --border-color: #e5e5e5;
+}
+
+// Quando o atributo data-theme for 'dark'
+[data-theme='dark'] {
+  --bg-body: #0f172a; // Um azul marinho bem escuro
+  --text-main: #f8fafc;
+  --primary: #38bdf8; // Um azul mais brilhante para contraste
+  --card-bg: #1e293b;
+  --border-color: #334155;
+}
+
+// Breakpoints de Responsividade
+$mobile: 768px;
+$tablet: 1024px;
