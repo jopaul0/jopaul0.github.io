@@ -1,0 +1,17 @@
+// src/styles/_mixins.scss
+@import './variables';
+
+@mixin title-xl {
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: clamp(52px, 6vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+}
+
+@mixin section-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
