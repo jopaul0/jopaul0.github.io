@@ -5,8 +5,8 @@ Este roadmap descreve as etapas técnicas para a construção de um portfólio r
 ---
 
 ## Fase 1: Fundação e Core (A Base)
-- [ ] **Setup do Ambiente:** Iniciar projeto com Vite, configurar `tsconfig.json` e estrutura de pastas modular.
-- [ ] **Arquitetura Sass:** Criar `src/styles/` com:
+- [x] **Setup do Ambiente:** Iniciar projeto com Vite, configurar `tsconfig.json` e estrutura de pastas modular.
+- [x] **Arquitetura Sass:** Criar `src/styles/` com:
     - `_variables.scss`: Cores, fontes e espaçamentos.
     - `_mixins.scss`: Media queries para responsividade.
     - `global.scss`: Reset de CSS e estilos base.
