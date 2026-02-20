@@ -7,6 +7,14 @@ Bem-vindo ao repositório do meu portfólio! Este espaço está sendo desenvolvi
 
 ---
 
+## Documentação e Planejamento
+Para acompanhar os detalhes técnicos e o progresso do desenvolvimento, acesse os documentos abaixo:
+
+* [📍 **Roadmap de Desenvolvimento**](./docs/ROADMAP.md) - Etapas de implementação e checklist de progresso.
+* [🎨 **Concepção de Design**](./docs/DESIGN_CONCEPTS.md) - Referências visuais e processo de criação da UI com auxílio de IA.
+
+---
+
 ## Sobre Mim
 Estudante do 3º semestre de **Análise e Desenvolvimento de Sistemas na FATEC São José dos Campos**. Sou um programador focado em lógica e backend (Java/Python), explorando agora o poder do ecossistema Frontend moderno para criar interfaces robustas e performáticas.
 
