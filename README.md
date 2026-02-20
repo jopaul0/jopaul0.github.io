@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Meu Portfólio Pessoal (Em Construção 🛠️)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do meu portfólio! Este espaço está sendo desenvolvido para apresentar minha trajetória como desenvolvedor, meus projetos e as tecnologias que domino.
 
-Currently, two official plugins are available:
+> **Status do Projeto:** Em desenvolvimento ativo. 
+> Atualmente focando na implementação da arquitetura modular e integração da seção de contato.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Documentação e Planejamento
+Para acompanhar os detalhes técnicos e o progresso do desenvolvimento, acesse os documentos abaixo:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* [📍 **Roadmap de Desenvolvimento**](./docs/ROADMAP.md) - Etapas de implementação e checklist de progresso.
+* [🎨 **Concepção de Design**](./docs/DESIGN_CONCEPTS.md) - Referências visuais e processo de criação da UI com auxílio de IA.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Sobre Mim
+Estudante do 3º semestre de **Análise e Desenvolvimento de Sistemas na FATEC São José dos Campos**. Sou um programador focado em lógica e backend (Java/Python), explorando agora o poder do ecossistema Frontend moderno para criar interfaces robustas e performáticas.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Stack Tecnológica
+Para este projeto, escolhi tecnologias que refletem as demandas atuais do mercado:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **React + Vite**: Para uma experiência de desenvolvimento rápida e otimizada.
+* **TypeScript**: Garantindo código escalável e livre de erros bobos com tipagem estática.
+* **Sass (SCSS)**: Utilizando mixins, funções e variáveis para uma estilização profissional e organizada.
+* **Web3Forms**: Implementação de comunicação via e-mail de forma Serverless.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## O que estou aplicando neste projeto?
+Mais do que apenas um site, este portfólio é um laboratório de boas práticas:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **Arquitetura Modular**: Separação clara de componentes, estilos e serviços.
+* **Mobile First**: Garantindo que o portfólio seja impecável em qualquer dispositivo.
+* **Clean Code**: Código escrito com foco em legibilidade e manutenção, aplicando os conceitos aprendidos em ADS.
+
+---
+
+## Vamos nos conectar?
+Mesmo com o portfólio em obras, você pode conferir meus outros projetos aqui no GitHub:
+
+* **GitHub**: [jopaul0](https://github.com/jopaul0)
+* **LinkedIn**: [João Paulo Santos](https://linkedin.com/in/joaosantos02)
