@@ -10,8 +10,8 @@ Bem-vindo ao repositório do meu portfólio! Este espaço está sendo desenvolvi
 ## Documentação e Planejamento
 Para acompanhar os detalhes técnicos e o progresso do desenvolvimento, acesse os documentos abaixo:
 
-* [📍 **Roadmap de Desenvolvimento**](./docs/ROADMAP.md) - Etapas de implementação e checklist de progresso.
-* [🎨 **Concepção de Design**](./docs/DESIGN_CONCEPTS.md) - Referências visuais e processo de criação da UI com auxílio de IA.
+* [📍 **Roadmap de Desenvolvimento**](./docs/roadmap/README.md) - Etapas de implementação e checklist de progresso.
+* [🎨 **Concepção de Design**](./docs/preview/README.md) - Referências visuais e processo de criação da UI com auxílio de IA.
 
 ---
 
