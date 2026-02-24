@@ -28,19 +28,6 @@
         }
     }
 
-    .logo {
-        @include mix.title-xl;
-        font-size: 20px;
-        color: var(--accent);
-        text-decoration: none;
-        letter-spacing: -0.5px;
-        z-index: 102;
-
-        span {
-            color: var(--text);
-        }
-    }
-
     .hamburger {
         display: none;
         flex-direction: column;
@@ -81,35 +68,15 @@
             z-index: 100;
             opacity: 0;
         }
-
-        a {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 14px; // Um pouco maior no mobile
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            transition: color 0.2s;
-
-            &:hover {
-                color: var(--accent);
-            }
-        }
     }
 
     .navCta {
-        border: 1px solid var(--accent);
-        color: var(--accent);
-        padding: 10px 22px;
-        font-family: var(--font-main);
-        font-size: 12px;
-        text-decoration: none;
-
         @include mix.mobile {
             display: none;
         }
     }
 
-    // ESTADO ABERTO (Dropdown)
+    // ESTADO ABERTO
     &.menuOpen {
         // Garante que a navbar tenha fundo ao abrir o menu
         background: var(--surface);

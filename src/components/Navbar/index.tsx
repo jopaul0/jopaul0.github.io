@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
+import { Logo } from '@/components/Logo';
+import { SimpleButton } from '@/components/SimpleButton';
+import { NavLink } from '@/components/NavLink';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,9 +19,7 @@ export const Navbar = () => {
 
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuOpen : ''}`}>
-      <a href="#" className={styles.logo}>
-        JO<span>PAULO</span>
-      </a>
+      <Logo />
 
       {/* Botão Hambúrguer - Só aparece no Mobile */}
       <button 
@@ -31,15 +32,14 @@ export const Navbar = () => {
       </button>
 
       <ul className={styles.navLinks}>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><NavLink href="#sobre">SOBRE</NavLink></li>
+        <li><NavLink href="#experiencia">EXPERIÊNCIA</NavLink></li>
+        <li><NavLink href="#projetos">PROJETOS</NavLink></li>
+        <li><NavLink href="#contato">CONTATO</NavLink></li>
       </ul>
 
-      <a href="#contato" className={styles.navCta}>
-        Vamos conversar →
-      </a>
+
+      <SimpleButton outline label="Vamos conversar →" className={styles.navCta}/>
     </nav>
   );
 };

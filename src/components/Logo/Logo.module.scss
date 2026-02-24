@@ -1,0 +1,14 @@
+@use '@/styles/mixins' as mix;
+
+.logo {
+    @include mix.title-xl;
+    font-size: 20px;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    z-index: 102;
+
+    span {
+        color: var(--text);
+    }
+}

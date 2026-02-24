@@ -1,0 +1,11 @@
+.navLinks {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    transition: color 0.2s;
+
+    &:hover {
+        color: var(--accent);
+    }
+}
