@@ -1,5 +1,6 @@
 import { Navbar }  from '@/components/Navbar'
 import { Cursor }  from '@/components/Cursor'
+import { Footer } from '@/components/Footer'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
         {/* O conteúdo das próximas fases entrará aqui */}
         <h1>Conteúdo Inicial</h1>
       </main>
+      <Footer />
     </>
   )
 }
