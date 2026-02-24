@@ -1,20 +1,22 @@
 @use '@/styles/variables' as vars;
 
 .container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
   cursor: pointer;
+  user-select: none;
+  padding: 4px;
 }
 
 .switch {
   position: relative;
   width: 44px;
   height: 22px;
-  background: var(--surface);
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &::after {
     content: '';
@@ -32,18 +34,18 @@
 .active {
   .switch {
     border-color: var(--accent);
-    
     &::after {
       background: var(--accent);
       transform: translateX(20px);
     }
   }
+  .label { color: var(--accent); }
 }
 
 .label {
   font-family: var(--font-main);
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
   color: var(--muted);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
 }

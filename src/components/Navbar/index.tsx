@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
 import { Logo } from '@/components/Logo';
-import { SimpleButton } from '@/components/SimpleButton';
 import { NavLink } from '@/components/NavLink';
-import { ThemeToggle } from '@/components/ThemeToggle';
+import { ThemeToggle } from '@/components/ThemeToggle'; // Importe o novo componente
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,7 +12,6 @@ export const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -22,11 +20,10 @@ export const Navbar = () => {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuOpen : ''}`}>
       <Logo />
 
-      {/* Botão Hambúrguer - Só aparece no Mobile */}
-      <button 
-        className={styles.hamburger} 
+      {/* Menu Hambúrguer (Mobile) */}
+      <button
+        className={styles.hamburger}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        aria-label="Abrir menu"
       >
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
@@ -37,11 +34,11 @@ export const Navbar = () => {
         <li><NavLink href="#experiencia">EXPERIÊNCIA</NavLink></li>
         <li><NavLink href="#projetos">PROJETOS</NavLink></li>
         <li><NavLink href="#contato">CONTATO</NavLink></li>
-        <li><ThemeToggle /></li>
+        <li className={styles.themeItemMobile}>
+          <ThemeToggle />
+        </li>
       </ul>
 
-
-      <SimpleButton outline label="Vamos conversar →" className={styles.navCta}/>
     </nav>
   );
 };
