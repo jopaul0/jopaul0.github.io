@@ -1,5 +1,4 @@
-// src/styles/_mixins.scss
-@import './variables';
+@use '@/styles/variables' as vars;
 
 @mixin title-xl {
   font-family: var(--font-title);
@@ -14,4 +13,10 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--accent);
+}
+
+@mixin mobile {
+  @media (max-width: #{vars.$mobile}) {
+    @content;
+  }
 }

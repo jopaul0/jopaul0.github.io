@@ -1,0 +1,91 @@
+@use '@/styles/variables' as vars;
+@use '@/styles/mixins' as mix;
+
+.footer {
+  width: 100%;
+  padding: 60px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: var(--bg);
+
+  @include mix.mobile {
+    padding: 40px 24px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mix.mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  .brand {
+    .logo {
+      @include mix.title-xl;
+      font-size: 24px;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+      
+      span { color: var(--text); }
+    }
+    
+    p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      max-width: 250px;
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 60px;
+
+    @include mix.mobile {
+      gap: 40px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      span { @include mix.section-label; }
+      
+      a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 13px;
+        transition: color 0.2s;
+
+        &:hover { color: var(--accent); }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid var(--muted-dark);
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    @include mix.mobile {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+}

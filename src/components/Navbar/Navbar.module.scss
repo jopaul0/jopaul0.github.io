@@ -1,0 +1,134 @@
+@use '@/styles/variables' as vars;
+@use '@/styles/mixins' as mix;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 60px;
+    background: transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include mix.mobile {
+        padding: 24px 24px;
+    }
+
+    &.scrolled {
+        padding: 18px 60px;
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+
+        @include mix.mobile {
+            padding: 16px 24px;
+        }
+    }
+
+    .logo {
+        @include mix.title-xl;
+        font-size: 20px;
+        color: var(--accent);
+        text-decoration: none;
+        letter-spacing: -0.5px;
+        z-index: 102;
+
+        span {
+            color: var(--text);
+        }
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 102;
+
+        .bar {
+            width: 25px;
+            height: 2px;
+            background-color: var(--accent);
+            transition: 0.3s ease;
+        }
+
+        @include mix.mobile {
+            display: flex;
+        }
+    }
+
+    .navLinks {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+
+        @include mix.mobile {
+            position: absolute; // Muda para absoluto em relação à navbar
+            top: -400px; // Começa escondido acima
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100;
+            opacity: 0;
+        }
+
+        a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 14px; // Um pouco maior no mobile
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+
+            &:hover {
+                color: var(--accent);
+            }
+        }
+    }
+
+    .navCta {
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        padding: 10px 22px;
+        font-family: var(--font-main);
+        font-size: 12px;
+        text-decoration: none;
+
+        @include mix.mobile {
+            display: none;
+        }
+    }
+
+    // ESTADO ABERTO (Dropdown)
+    &.menuOpen {
+        // Garante que a navbar tenha fundo ao abrir o menu
+        background: var(--surface);
+
+        .navLinks {
+            @include mix.mobile {
+                top: 100%; // Desce exatamente para baixo da navbar
+                opacity: 1;
+            }
+        }
+
+        .hamburger {
+            .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .bar:nth-child(2) {
+                transform: translateY(-0px) rotate(-45deg);
+            }
+        }
+    }
+}
