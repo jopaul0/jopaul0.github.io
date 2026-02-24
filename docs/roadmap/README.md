@@ -10,14 +10,14 @@ Este roadmap descreve as etapas técnicas para a construção de um portfólio r
     - `_variables.scss`: Cores, fontes e espaçamentos.
     - `_mixins.scss`: Media queries para responsividade.
     - `global.scss`: Reset de CSS e estilos base.
-- [ ] **Sistema de Temas (Dark/Light):** Implementar variáveis CSS controladas por `data-theme` no Sass.
+- [x] **Sistema de Temas (Dark/Light):** Implementar variáveis CSS controladas por `data-theme` no Sass.
 - [ ] **Segurança (DevTools Guard):** Implementar lógica para detectar abertura do console e renderizar o "bloqueio" ou mensagem customizada.
 
 ## Fase 2: Estrutura Global (Layout)
-- [ ] **Navbar Responsiva:** - [ ] Efeito *glassmorphism* no background.
-    - [ ] Lógica de Scroll Suave para as seções.
+- [x] **Navbar Responsiva:** - [ ] Efeito *glassmorphism* no background.
+    - [x] Lógica de Scroll Suave para as seções.
     - [ ] Toggle Switch funcional para alternar entre modo claro e escuro.
-    - [ ] Menu hambúrguer para dispositivos móveis.
+    - [x] Menu hambúrguer para dispositivos móveis.
 - [ ] **Footer:**
     - [ ] Links para redes sociais (GitHub, LinkedIn).
     - [ ] Seção de créditos mencionando as referências visuais (Ruan, Thainan, etc.).
