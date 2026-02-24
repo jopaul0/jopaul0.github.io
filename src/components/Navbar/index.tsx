@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import styles from '@/components/Navbar/Navbar.module.scss';
+import styles from './Navbar.module.scss';
 import { Logo } from '@/components/Logo';
+import { SimpleButton } from '../SimpleButton';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,9 +37,8 @@ export const Navbar = () => {
         <li><a href="#contato">Contato</a></li>
       </ul>
 
-      <a href="#contato" className={styles.navCta}>
-        Vamos conversar →
-      </a>
+
+      <SimpleButton outline label="Vamos conversar →" className={styles.navCta}/>
     </nav>
   );
 };

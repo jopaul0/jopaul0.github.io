@@ -1,4 +1,4 @@
-import styles from '@/components/Footer/Footer.module.scss';
+import styles from './Footer.module.scss';
 import { Logo } from '@/components/Logo';
 
 export const Footer = () => {

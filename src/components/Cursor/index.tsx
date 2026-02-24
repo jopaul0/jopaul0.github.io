@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from '@/components/Cursor/Cursor.module.scss';
+import styles from './Cursor.module.scss';
 
 export const Cursor = () => {
     const dotRef = useRef<HTMLDivElement>(null);

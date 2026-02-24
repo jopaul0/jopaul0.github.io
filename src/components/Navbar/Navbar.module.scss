@@ -84,19 +84,12 @@
     }
 
     .navCta {
-        border: 1px solid var(--accent);
-        color: var(--accent);
-        padding: 10px 22px;
-        font-family: var(--font-main);
-        font-size: 12px;
-        text-decoration: none;
-
         @include mix.mobile {
             display: none;
         }
     }
 
-    // ESTADO ABERTO (Dropdown)
+    // ESTADO ABERTO
     &.menuOpen {
         // Garante que a navbar tenha fundo ao abrir o menu
         background: var(--surface);
