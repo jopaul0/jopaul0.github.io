@@ -3,6 +3,7 @@ import styles from './Navbar.module.scss';
 import { Logo } from '@/components/Logo';
 import { SimpleButton } from '@/components/SimpleButton';
 import { NavLink } from '@/components/NavLink';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,6 +37,7 @@ export const Navbar = () => {
         <li><NavLink href="#experiencia">EXPERIÊNCIA</NavLink></li>
         <li><NavLink href="#projetos">PROJETOS</NavLink></li>
         <li><NavLink href="#contato">CONTATO</NavLink></li>
+        <li><ThemeToggle /></li>
       </ul>
 
 
