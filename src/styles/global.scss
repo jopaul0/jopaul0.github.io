@@ -6,9 +6,31 @@
   box-sizing: border-box;
 }
 
+
+// Scroll
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg);
+}
+
 html {
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+
 
 body {
   background: var(--bg);
@@ -17,6 +39,7 @@ body {
   font-size: 14px;
   line-height: 1.6;
   overflow-x: hidden;
+  height: 120vh;
 
   &::before {
     content: '';
