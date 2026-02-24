@@ -5,22 +5,23 @@ Este roadmap descreve as etapas técnicas para a construção de um portfólio r
 ---
 
 ## Fase 1: Fundação e Core (A Base)
-- [x] **Setup do Ambiente:** Iniciar projeto com Vite, configurar `tsconfig.json` e estrutura de pastas modular.
-- [x] **Arquitetura Sass:** Criar `src/styles/` com:
+- [X] **Setup do Ambiente:** Iniciar projeto com Vite, configurar `tsconfig.json` e estrutura de pastas modular.
+- [X] **Arquitetura Sass:** Criar `src/styles/` com:
     - `_variables.scss`: Cores, fontes e espaçamentos.
     - `_mixins.scss`: Media queries para responsividade.
     - `global.scss`: Reset de CSS e estilos base.
-- [x] **Sistema de Temas (Dark/Light):** Implementar variáveis CSS controladas por `data-theme` no Sass.
+- [X] **Sistema de Temas (Dark/Light):** Implementar variáveis CSS controladas por `data-theme` no Sass.
 - [ ] **Segurança (DevTools Guard):** Implementar lógica para detectar abertura do console e renderizar o "bloqueio" ou mensagem customizada.
 
 ## Fase 2: Estrutura Global (Layout)
-- [x] **Navbar Responsiva:** - [ ] Efeito *glassmorphism* no background.
-    - [x] Lógica de Scroll Suave para as seções.
+- [X] **Navbar Responsiva:**
+    - [X]  Efeito *glassmorphism* no background.
+    - [X] Lógica de Scroll Suave para as seções.
     - [ ] Toggle Switch funcional para alternar entre modo claro e escuro.
-    - [x] Menu hambúrguer para dispositivos móveis.
-- [ ] **Footer:**
-    - [ ] Links para redes sociais (GitHub, LinkedIn).
-    - [ ] Seção de créditos mencionando as referências visuais (Ruan, Thainan, etc.).
+    - [X] Menu hambúrguer para dispositivos móveis.
+- [X] **Footer:**
+    - [X] Links para redes sociais (GitHub, LinkedIn).
+    - [X] Seção de créditos mencionando as referências visuais (Ruan, Thainan, etc.).
 
 ## Fase 3: Seções de Interface (UI)
 - [ ] **Hero Section:** Introdução de impacto, título dinâmico e Call to Action (CTA).
