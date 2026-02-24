@@ -1,5 +1,6 @@
 import styles from './Footer.module.scss';
 import { Logo } from '@/components/Logo';
+import { NavLink } from '@/components/NavLink';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,15 +16,15 @@ export const Footer = () => {
         <div className={styles.links}>
           <div>
             <span>Social</span>
-            <a href="https://github.com/jopaul0" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/joaosantos02" target="_blank">LinkedIn</a>
-            <a href="https://instagram.com/jopaul0_" target="_blank">Instagram</a>
+            <NavLink href="https://github.com/jopaul0" target="_blank">GitHub</NavLink>
+            <NavLink href="https://linkedin.com/in/joaosantos02" target="_blank">LinkedIn</NavLink>
+            <NavLink href="https://instagram.com/jopaul0_" target="_blank">Instagram</NavLink>
           </div>
           <div>
             <span>Navegação</span>
-            <a href="#sobre">Sobre</a>
-            <a href="#experiencia">Experiência</a>
-            <a href="#projetos">Projetos</a>
+            <NavLink href="#sobre">Sobre</NavLink>
+            <NavLink href="#experiencia">Experiência</NavLink>
+            <NavLink href="#projetos">Projetos</NavLink>
           </div>
         </div>
       </div>

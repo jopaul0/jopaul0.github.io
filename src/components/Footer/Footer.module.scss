@@ -60,14 +60,6 @@
 
       span { @include mix.section-label; }
       
-      a {
-        color: var(--text);
-        text-decoration: none;
-        font-size: 13px;
-        transition: color 0.2s;
-
-        &:hover { color: var(--accent); }
-      }
     }
   }
 

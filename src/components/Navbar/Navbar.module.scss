@@ -68,19 +68,6 @@
             z-index: 100;
             opacity: 0;
         }
-
-        a {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 14px; // Um pouco maior no mobile
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            transition: color 0.2s;
-
-            &:hover {
-                color: var(--accent);
-            }
-        }
     }
 
     .navCta {
