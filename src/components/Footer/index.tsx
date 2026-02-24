@@ -1,4 +1,5 @@
-import styles from './Footer.module.scss';
+import styles from '@/components/Footer/Footer.module.scss';
+import { Logo } from '@/components/Logo';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,7 +8,7 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.top}>
         <div className={styles.brand}>
-          <a href="#" className={styles.logo}>JO<span>PAULO</span></a>
+          <Logo />
           <p>Desenvolvedor focado em soluções robustas e performance.</p>
         </div>
 

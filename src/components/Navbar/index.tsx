@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import styles from './Navbar.module.scss';
+import styles from '@/components/Navbar/Navbar.module.scss';
+import { Logo } from '@/components/Logo';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,9 +17,7 @@ export const Navbar = () => {
 
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuOpen : ''}`}>
-      <a href="#" className={styles.logo}>
-        JO<span>PAULO</span>
-      </a>
+      <Logo />
 
       {/* Botão Hambúrguer - Só aparece no Mobile */}
       <button 
