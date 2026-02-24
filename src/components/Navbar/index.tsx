@@ -3,6 +3,7 @@ import styles from './Navbar.module.scss';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,10 +15,20 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
+    <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuOpen : ''}`}>
       <a href="#" className={styles.logo}>
         JO<span>PAULO</span>
       </a>
+
+      {/* Botão Hambúrguer - Só aparece no Mobile */}
+      <button 
+        className={styles.hamburger} 
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Abrir menu"
+      >
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+      </button>
 
       <ul className={styles.navLinks}>
         <li><a href="#sobre">Sobre</a></li>
