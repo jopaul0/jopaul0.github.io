@@ -1,8 +1,20 @@
+import { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
 
 export const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
       <a href="#" className={styles.logo}>
         JO<span>PAULO</span>
       </a>
