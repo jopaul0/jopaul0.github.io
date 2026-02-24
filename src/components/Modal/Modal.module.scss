@@ -1,0 +1,45 @@
+@use '@/styles/variables' as vars;
+@use '@/styles/mixins' as mix;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 24px;
+  cursor: default;
+}
+
+.content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: var(--font-main);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+
+  &:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+  }
+}
