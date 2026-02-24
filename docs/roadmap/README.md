@@ -17,7 +17,7 @@ Este roadmap descreve as etapas técnicas para a construção de um portfólio r
 - [X] **Navbar Responsiva:**
     - [X]  Efeito *glassmorphism* no background.
     - [X] Lógica de Scroll Suave para as seções.
-    - [ ] Toggle Switch funcional para alternar entre modo claro e escuro.
+    - [X] Toggle Switch funcional para alternar entre modo claro e escuro.
     - [X] Menu hambúrguer para dispositivos móveis.
 - [X] **Footer:**
     - [X] Links para redes sociais (GitHub, LinkedIn).
