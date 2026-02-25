@@ -1,9 +1,10 @@
 import { MainLayout } from '@/layout/MainLayout';
+import { Hero } from '@/pages/Hero';
 
 function App() {
   return (
     <MainLayout>
-      <h1>Conteúdo Inicial</h1>
+      <Hero />
     </MainLayout>
   )
 }

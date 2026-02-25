@@ -8,19 +8,19 @@ import { useDevTools } from '@/hooks/useDevTools';
 export const MainLayout = ({ children }: MainLayoutProps) => {
   const isDevToolsOpen = useDevTools();
 
-  if (isDevToolsOpen) {
-    return (
-      <>
-        <DevToolsShield />
-      </>
-    );
-  }
+  // if (isDevToolsOpen) {
+  //   return (
+  //     <>
+  //       <DevToolsShield />
+  //     </>
+  //   );
+  // }
 
   return (
     <>
       <Cursor />
       <Navbar />
-      <main style={{ paddingTop: '120px', padding: '120px 60px', minHeight: '80vh' }}>
+      <main>
         {children}
       </main>
       <Footer />
