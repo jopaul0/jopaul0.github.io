@@ -8,13 +8,13 @@ import { useDevTools } from '@/hooks/useDevTools';
 export const MainLayout = ({ children }: MainLayoutProps) => {
   const isDevToolsOpen = useDevTools();
 
-  // if (isDevToolsOpen) {
-  //   return (
-  //     <>
-  //       <DevToolsShield isOpen={true}/>
-  //     </>
-  //   );
-  // }
+  if (isDevToolsOpen) {
+    return (
+      <>
+        <DevToolsShield isOpen={true} />
+      </>
+    );
+  }
 
   return (
     <>
