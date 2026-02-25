@@ -1,12 +1,17 @@
 import styles from './Hero.module.scss';
 import { EmailIcon, GithubIcon, LinkedinIcon } from '@/components/Icons';
 import { SimpleButton } from '@/components/SimpleButton';
+import { StatusBadge } from '@/components/StatusBadge';
 
 export const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.heroLeft}>
-        <div className={styles.heroLabel}>Disponível para novos projetos</div>
+        <StatusBadge
+          variant="default"
+          className={styles.heroLabel}
+          label='Disponível para novos projetos'
+        />
 
         <h1 className={styles.heroTitle}>
           Full Stack <br />
@@ -67,11 +72,16 @@ export const Hero = () => {
             </svg>
             <span>João Paulo</span>
           </div>
-          <div className={styles.photoTag}>João Paulo</div>
-          <div className={styles.photoTag2}>
-            <span className={styles.statusDot}></span>
-            Open to work
-          </div>
+          <StatusBadge
+            variant="filled"
+            className={styles.photoTag}
+            label="João Paulo"
+            noDot
+          />
+          <StatusBadge
+            variant="default"
+            className={styles.photoTag2}
+          />
         </div>
       </div>
     </section>
