@@ -2,6 +2,7 @@ import styles from './Hero.module.scss';
 import { EmailIcon, GithubIcon, LinkedinIcon } from '@/components/Icons';
 import { SimpleButton } from '@/components/SimpleButton';
 import { StatusBadge } from '@/components/StatusBadge';
+import { SocialLink } from '@/components/SocialLink';
 
 export const Hero = () => {
   return (
@@ -28,36 +29,12 @@ export const Hero = () => {
           <SimpleButton outline label="Download CV →" onClick={() => { }} />
         </div>
 
+
+
         <div className={styles.heroStats}>
-          <a href="https://github.com/jopaul0" target="_blank" rel="noreferrer" className={styles.statLink}>
-            <div className={styles.statIcon}>
-              <GithubIcon />
-            </div>
-            <div className={styles.statContent}>
-              <div className={styles.statLabel}>GitHub</div>
-              <div className={styles.statValue}>@jopaul0</div>
-            </div>
-          </a>
-
-          <a href="https://linkedin.com/in/joaosantos02" target="_blank" rel="noreferrer" className={styles.statLink}>
-            <div className={styles.statIcon}>
-              <LinkedinIcon />
-            </div>
-            <div className={styles.statContent}>
-              <div className={styles.statLabel}>LinkedIn</div>
-              <div className={styles.statValue}>João Paulo</div>
-            </div>
-          </a>
-
-          <a href="mailto:jopaulo.as8@gmail.com" className={styles.statLink}>
-            <div className={styles.statIcon}>
-              <EmailIcon />
-            </div>
-            <div className={styles.statContent}>
-              <div className={styles.statLabel}>E-mail</div>
-              <div className={styles.statValue}>Contato</div>
-            </div>
-          </a>
+          <SocialLink href="https://github.com/jopaul0" label="GitHub" label2="@jopaul0" icon={<GithubIcon />} />
+          <SocialLink href="https://linkedin.com/in/joaosantos02" label="LinkedIn" label2="João Paulo" icon={<LinkedinIcon />} />
+          <SocialLink href="mailto:jopaulo.as8@gmail.com" label="E-mail" label2="Contato" icon={<EmailIcon />} />
         </div>
       </div>
 

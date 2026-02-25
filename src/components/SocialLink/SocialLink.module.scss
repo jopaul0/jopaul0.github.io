@@ -1,0 +1,56 @@
+.statLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+
+      .statIcon {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .statValue {
+        color: var(--text);
+      }
+    }
+  }
+
+  .statIcon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    transition: all 0.3s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .statLabel {
+    font-size: 10px;
+    text-align: center;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+
+  .statValue {
+    font-family: var(--font-main);
+    font-size: 13px;
+    color: var(--muted-dark);
+    font-weight: 500;
+    margin-top: 4px;
+    transition: color 0.3s ease;
+  }
