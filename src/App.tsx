@@ -1,7 +1,8 @@
 import { MainLayout } from '@/layout/MainLayout';
-import { Hero } from '@/pages/Hero';
 import { Marquee } from '@/components/Marquee';
+import { Hero } from '@/pages/Hero';
 import { About } from '@/pages/About';
+import { Experience } from '@/pages/Experience';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Hero />
       <Marquee />
       <About />
+      <Experience />
     </MainLayout>
   )
 }

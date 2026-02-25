@@ -1,0 +1,115 @@
+@use '@/styles/variables' as vars;
+@use '@/styles/mixins' as mix;
+
+.experience {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 120px 60px;
+
+  @include mix.mobile {
+    padding: 80px 24px;
+  }
+}
+
+.sectionHeader {
+  margin-bottom: 80px;
+  
+  .sectionNum {
+    @include mix.section-label;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .sectionTitle {
+    @include mix.title-xl;
+    font-size: clamp(36px, 4vw, 56px);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: var(--accent);
+    }
+  }
+}
+
+.expList {
+  display: flex;
+  flex-direction: column;
+}
+
+.expItem {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+
+  &:last-child { border-bottom: none; }
+
+  @include mix.mobile {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .period {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    padding-top: 4px;
+  }
+
+  .role {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .company {
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: block;
+    font-weight: 500;
+  }
+
+  .desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .arrow {
+    color: var(--muted-dark);
+    font-size: 20px;
+    transition: all 0.3s ease;
+    padding-top: 4px;
+
+    @include mix.mobile { display: none; }
+  }
+
+  &:hover {
+    .arrow {
+      color: var(--accent);
+      transform: translateX(8px);
+    }
+  }
+}
