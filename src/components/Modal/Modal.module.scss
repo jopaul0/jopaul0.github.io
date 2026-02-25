@@ -33,6 +33,10 @@
       color: var(--accent);
     }
 
+    &.noHeader {
+      display: none;
+    }
+
     .closeButton {
       background: none;
       border: none;

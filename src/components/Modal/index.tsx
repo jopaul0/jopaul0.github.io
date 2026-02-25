@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import styles from './Modal.module.scss';
 import type { ModalProps } from './interface';
 
-export const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
+export const Modal = ({ isOpen, onClose, title, children, noHeader=false}: ModalProps) => {
 
   useEffect(() => {
     if (isOpen) {
@@ -19,7 +19,7 @@ export const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
   return createPortal(
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <header className={styles.header}>
+        <header className={`${styles.header} ${noHeader ? styles.noHeader : ''}`}>
           <h2 className={styles.title}>{title}</h2>
           <button className={styles.closeButton} onClick={onClose} aria-label="Fechar">
             &times;
