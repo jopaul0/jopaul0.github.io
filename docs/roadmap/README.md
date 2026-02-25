@@ -37,7 +37,7 @@ Este roadmap descreve as etapas técnicas para a construção de um portfólio r
 - [X] **Estados de UI:** Implementar animações de carregamento (loading) e mensagens de sucesso/erro após o envio.
 
 ## Fase 5: Finalização e Deploy
-- [ ] **Responsividade Crítica:** Ajuste fino de todos os componentes para telas pequenas.
+- [X] **Responsividade Crítica:** Ajuste fino de todos os componentes para telas pequenas.
 - [ ] **Otimização de Assets:** Conversão de imagens para WebP e compressão de arquivos.
 - [ ] **Deploy:** Publicação via Vercel ou Netlify integrada ao repositório GitHub.
 
