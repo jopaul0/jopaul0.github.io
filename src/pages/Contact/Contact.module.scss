@@ -1,7 +1,11 @@
 @use '@/styles/variables' as vars;
 @use '@/styles/mixins' as mix;
 
-.contact {
+.contactSection{
+    border-top: 60px solid var(--surface);
+}
+
+.contactContainer {
     display: flex;
     flex-direction: column;
     align-items: center;

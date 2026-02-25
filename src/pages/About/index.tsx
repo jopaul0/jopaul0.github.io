@@ -7,7 +7,7 @@ import skillsData from '@/data/skills.json';
 
 export const About = () => {
     return (
-        <Section id="sobre">
+        <Section id="sobre" noGlow>
             <div className="container-section">
                 <div className={styles.sectionHeader}>
                     <SectionTitle number="01 — Sobre Mim" title={<>Quem sou <em>eu</em></>} />

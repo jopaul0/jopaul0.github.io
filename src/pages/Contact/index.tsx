@@ -47,7 +47,7 @@ export const Contact = () => {
     };
 
     return (
-        <Section id="contato" containerClassName={styles.contact}>
+        <Section id="contato" containerClassName={styles.contactContainer} sectionClassName={styles.contactSection} noGlow>
             <div className={styles.bgText}>CONTATO</div>
             <SectionTitle number="04 — CONTATO" title={<>Vamos <em>conversar?</em></>} />
 

@@ -10,6 +10,37 @@
   transform: translateY(40px);
   transition: opacity 1s cubic-bezier(0.2, 0.6, 0.2, 1),
     transform 1s cubic-bezier(0.2, 0.6, 0.2, 1);
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 40%;
+    height: 60%;
+    background: radial-gradient(circle, var(--glow-color) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(80px);
+  }
+
+  &.noGlow::before {
+    display: none;
+  }
+
+  .glowRight {
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    width: 30%;
+    height: 50%;
+    background: radial-gradient(circle, var(--glow-color) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(80px);
+    opacity: 0.6;
+  }
 
   @include mix.mobile {
     padding: 80px 24px;

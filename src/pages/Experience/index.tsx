@@ -6,7 +6,7 @@ import { Section } from '@/components/Section';
 
 export const Experience = () => {
   return (
-    <Section id="experiencia" sectionClassName={styles.experience}>
+    <Section id="experiencia" sectionClassName={styles.experience} noGlow>
       <div className={styles.sectionHeader}>
         <SectionTitle number="02 — Experiência" title={<>Onde <em>trabalhei</em></>} />
       </div>

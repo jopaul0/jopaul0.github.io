@@ -2,7 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './Section.module.scss';
 import type { SectionProps } from './interface';
 
-export const Section = ({ children, id, sectionClassName = "", containerClassName = "" }: SectionProps) => {
+export const Section = ({ 
+  children, 
+  id, 
+  sectionClassName = "", 
+  containerClassName = "",
+  noGlow = false
+}: SectionProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -13,7 +19,7 @@ export const Section = ({ children, id, sectionClassName = "", containerClassNam
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 } 
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -27,8 +33,10 @@ export const Section = ({ children, id, sectionClassName = "", containerClassNam
     <section 
       id={id} 
       ref={sectionRef}
-      className={`${styles.section} ${sectionClassName} ${isVisible ? styles.visible : ''}`}
+      className={`${styles.section} ${sectionClassName} ${isVisible ? styles.visible : ''} ${noGlow ? styles.noGlow : ''}`}
     >
+      {!noGlow && <div className={styles.glowRight} />} 
+      
       <div className={`${styles.container} ${containerClassName}`}>
         {children}
       </div>

@@ -5,4 +5,5 @@ export interface SectionProps {
   id?: string;
   sectionClassName?: string;
   containerClassName?: string;
+  noGlow?: boolean;
 }

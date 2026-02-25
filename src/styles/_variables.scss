@@ -18,6 +18,8 @@
   --font-title: 'Syne', sans-serif;
 
   --max-width: 1400px;
+
+  --glow-color: rgba(224, 205, 29, 0.06);
 }
 
 [data-theme='light'] {
@@ -28,6 +30,7 @@
   --accent2: #a455ee;
   --text: #1a1a1a;
   --muted: #777777;
+  --glow-color: rgba(142, 41, 236, 0.12);
 }
 
 $mobile: 768px;
