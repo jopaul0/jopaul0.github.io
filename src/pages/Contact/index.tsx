@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './Contact.module.scss';
 import { SectionTitle } from '@/components/SectionTitle';
 import { SimpleButton } from '@/components/SimpleButton';
-import { Input } from '@/components/Input';
+import { InputText, TextArea } from '@/components/Input';
 
 export const Contact = () => {
     const [result, setResult] = useState("");
@@ -39,9 +39,9 @@ export const Contact = () => {
 
             <form className={styles.formContainer} onSubmit={onSubmit}>
 
-                <Input label="Nome" name="name" type="text" placeholder="Teu nome completo" required />
-                <Input label="Email" name="email" type="email" placeholder="teu@email.com" required />
-                <Input label="Mensagem" name="message" type="textarea" placeholder="Como posso ajudar?" required />
+                <InputText label="Nome" name="name" type="text" placeholder="Teu nome completo" required />
+                <InputText label="Email" name="email" type="email" placeholder="teu@email.com" required />
+                <TextArea label="Mensagem" name="message" placeholder="Como posso ajudar?" required />
 
                 <SimpleButton label="ENVIAR MENSAGEM" />
 
