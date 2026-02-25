@@ -24,7 +24,7 @@ Este roadmap descreve as etapas técnicas para a construção de um portfólio r
     - [X] Seção de créditos mencionando as referências visuais (Ruan, Thainan, etc.).
 
 ## Fase 3: Seções de Interface (UI)
-- [ ] **Hero Section:** Introdução de impacto, título dinâmico e Call to Action (CTA).
+- [X] **Hero Section:** Introdução de impacto, título dinâmico e Call to Action (CTA).
 - [ ] **About Me:** Texto sobre formação acadêmica na FATEC, experiência com Java/Python e uso de Linux Mint.
 - [ ] **Skills Section:** Grid organizado por categorias (Frontend, Backend, Ferramentas) com ícones.
 - [ ] **Projects Section:** - [ ] Componente `ProjectCard.tsx` com tipos definidos.
