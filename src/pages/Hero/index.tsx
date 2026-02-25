@@ -1,5 +1,5 @@
 import styles from './Hero.module.scss';
-import { EmailIcon, GithubIcon, LinkedinIcon } from '@/components/Icons';
+import { EmailIcon, GithubIcon, LinkedinIcon, UserIcon } from '@/components/Icons';
 import { SimpleButton } from '@/components/SimpleButton';
 import { StatusBadge } from '@/components/StatusBadge';
 import { SocialLink } from '@/components/SocialLink';
@@ -43,10 +43,7 @@ export const Hero = () => {
           <div className={styles.cornerDeco}></div>
           <div className={styles.cornerDeco2}></div>
           <div className={styles.photoPlaceholder}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-            </svg>
+            <UserIcon />
             <span>João Paulo</span>
           </div>
           <StatusBadge
