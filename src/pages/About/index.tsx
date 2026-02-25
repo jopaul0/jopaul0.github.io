@@ -2,6 +2,22 @@ import styles from './About.module.scss';
 import { StatusBadge } from '@/components/StatusBadge';
 
 export const About = () => {
+
+    const skillsData = [
+        {
+            title: "Backend",
+            skills: ["Java", "Spring Boot", "SQL / MySQL", "Python", "Flask", "Node.js", "REST APIs"]
+        },
+        {
+            title: "Frontend",
+            skills: ["HTML / CSS", "JavaScript", "Sass", "TypeScript", "Vite", "React", "Tailwind CSS"]
+        },
+        {
+            title: "Ferramentas & Fluxo",
+            skills: ["Git / GitHub", "Docker", "Linux", "Scrum", "Figma", "WordPress"]
+        }
+    ];
+
     return (
         <section className={styles.about} id="sobre">
             <div className={styles.sectionHeader}>
@@ -23,26 +39,22 @@ export const About = () => {
                 </div>
 
                 <div className={styles.aboutRight}>
-                    <div className={styles.skillsGroup}>
-                        <div className={styles.groupTitle}>Tecnologias de Foco</div>
-                        <div className={styles.skillTags}>
-                            <StatusBadge label="Java" variant="filled" noDot interactive />
-                            <StatusBadge label="Spring Boot" variant="default" noDot />
-                            <StatusBadge label="SQL / MySQL" variant="default" noDot />
-                            <StatusBadge label="Python" variant="default" noDot />
-                            <StatusBadge label="Node.js" variant="default" noDot />
+                    {skillsData.map((group, index) => (
+                        <div key={index} className={styles.skillsGroup}>
+                            <div className={styles.groupTitle}>{group.title}</div>
+                            <div className={styles.skillTags}>
+                                {group.skills.map((skill) => (
+                                    <StatusBadge
+                                        key={skill}
+                                        label={skill}
+                                        variant="default"
+                                        noDot
+                                        interactive
+                                    />
+                                ))}
+                            </div>
                         </div>
-                    </div>
-
-                    <div className={styles.skillsGroup}>
-                        <div className={styles.groupTitle}>Ferramentas & Fluxo</div>
-                        <div className={styles.skillTags}>
-                            <StatusBadge label="Git / GitHub" variant="default" noDot />
-                            <StatusBadge label="Docker" variant="default" noDot />
-                            <StatusBadge label="Linux" variant="default" noDot />
-                            <StatusBadge label="Scrum" variant="default" noDot />
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
