@@ -1,18 +1,5 @@
 import styles from './Marquee.module.scss';
-
-const techStack = [
-    "Java",
-    "Spring Boot",
-    "SQL",
-    "MySQL",
-    "Node.js",
-    "Python",
-    "Flask",
-    "TypeScript",
-    "Git",
-    "Docker",
-    "Scrum"
-];
+import techStack from '@/data/marquee.json';
 
 export const Marquee = () => {
     return (
