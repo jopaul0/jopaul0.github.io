@@ -3,49 +3,68 @@ import styles from './Contact.module.scss';
 import { SectionTitle } from '@/components/SectionTitle';
 import { SimpleButton } from '@/components/SimpleButton';
 import { InputText, TextArea } from '@/components/Input';
+import { sendContactEmail } from '@/services/Web3Forms';
+import type { ContactFormData } from '@/services/Web3Forms/interface';
+import { validateEmail, validateRequired, validateMessageLength } from '@/utils/validation';
 
 export const Contact = () => {
-    const [result, setResult] = useState("");
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [statusMsg, setStatusMsg] = useState("");
+    const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    const onSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setResult("A enviar...");
-        const formData = new FormData(event.currentTarget);
+        setErrors({});
 
-        // Substitui pela tua chave do Web3Forms
-        formData.append("access_key", "TEU_ACCESS_KEY_AQUI");
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+        const data: ContactFormData = {
+            name: formData.get("name") as string,
+            email: formData.get("email") as string,
+            message: formData.get("message") as string,
+        };
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+        const newErrors: { [key: string]: string } = {};
+        if (!validateRequired(data.name)) newErrors.name = "O nome é obrigatório.";
+        if (!validateEmail(data.email)) newErrors.email = "Insira um email válido.";
+        if (!validateMessageLength(data.message)) newErrors.message = "A mensagem deve ter pelo menos 10 caracteres.";
 
-        const data = await response.json();
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
 
-        if (data.success) {
-            setResult("Mensagem enviada com sucesso!");
-            (event.target as HTMLFormElement).reset();
-        } else {
-            console.log("Erro:", data);
-            setResult(data.message);
+        try {
+            await sendContactEmail(data);
+            setStatus("success");
+            setStatusMsg("Mensagem enviada com sucesso!");
+            form.reset();
+        } catch (error: any) {
+            setStatus("error");
+            setStatusMsg(error.message || "Erro ao enviar.");
         }
     };
 
     return (
         <section className={styles.contact} id="contato">
             <div className={styles.bgText}>CONTATO</div>
-
             <SectionTitle number="04 — CONTATO" title={<>Vamos <em>conversar?</em></>} />
 
             <form className={styles.formContainer} onSubmit={onSubmit}>
+                <InputText label="Nome" name="name" placeholder="Teu nome completo" required error={errors.name} />
+                <InputText label="Email" name="email" type="email" placeholder="teu@email.com" required error={errors.email} />
+                <TextArea label="Mensagem" name="message" placeholder="Como posso ajudar?" required error={errors.message} />
 
-                <InputText label="Nome" name="name" type="text" placeholder="Teu nome completo" required />
-                <InputText label="Email" name="email" type="email" placeholder="teu@email.com" required />
-                <TextArea label="Mensagem" name="message" placeholder="Como posso ajudar?" required />
+                <SimpleButton
+                    label={status === "loading" ? "A ENVIAR..." : "ENVIAR MENSAGEM"}
+                    disable={status === "loading"}
+                />
 
-                <SimpleButton label="ENVIAR MENSAGEM" />
-
-                {result && <p className={styles.statusMsg}>{result}</p>}
+                {statusMsg && (
+                    <p className={`${styles.statusMsg} ${status === "error" ? styles.error : ""}`}>
+                        {statusMsg}
+                    </p>
+                )}
             </form>
         </section>
     );
