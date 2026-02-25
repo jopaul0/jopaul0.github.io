@@ -20,7 +20,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
     <>
       <Cursor />
       <Navbar />
-      <main style={{ paddingTop: '120px', padding: '120px 60px', minHeight: '80vh' }}>
+      <main>
         {children}
       </main>
       <Footer />
