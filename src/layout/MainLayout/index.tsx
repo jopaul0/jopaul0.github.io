@@ -11,7 +11,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
   // if (isDevToolsOpen) {
   //   return (
   //     <>
-  //       <DevToolsShield />
+  //       <DevToolsShield isOpen={true}/>
   //     </>
   //   );
   // }

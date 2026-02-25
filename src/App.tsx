@@ -3,6 +3,7 @@ import { Marquee } from '@/components/Marquee';
 import { Hero } from '@/pages/Hero';
 import { About } from '@/pages/About';
 import { Experience } from '@/pages/Experience';
+import { Projects } from '@/pages/Projects';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Marquee />
       <About />
       <Experience />
+      <Projects />
     </MainLayout>
   )
 }
