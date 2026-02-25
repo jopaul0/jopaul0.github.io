@@ -20,8 +20,8 @@ export const Hero = () => {
         </h1>
 
         <p className={styles.heroDesc}>
-          Transformo ideias em <strong>produtos digitais</strong> de alto impacto.
-          Especialista em <strong>Java, React</strong> e arquiteturas modernas.
+          Desenvolvendo soluções <strong>escaláveis</strong> com foco em arquitetura <strong>Backend</strong>.
+          Estudante de ADS dedicado ao domínio da linguagem <strong>Java</strong> e sistemas robustos.
         </p>
 
         <div className={styles.heroButtons}>
