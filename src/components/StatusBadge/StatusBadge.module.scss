@@ -19,6 +19,7 @@
 
   &.filled {
     background: var(--accent);
+    border: 1px solid var(--accent);
     color: var(--bg);
     font-weight: 700;
   }
@@ -38,6 +39,16 @@
   &.filled .dot {
     background: var(--bg);
   }
+
+  &.interactive:hover {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+
+    &.filled {
+      background: var(--bg);
+    }
+  }
+
 }
 
 @keyframes pulse {

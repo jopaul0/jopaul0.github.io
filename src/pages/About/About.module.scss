@@ -1,0 +1,95 @@
+@use '@/styles/variables' as vars;
+@use '@/styles/mixins' as mix;
+
+.about {
+    background: var(--bg);
+    padding: 120px 60px;
+
+    @include mix.mobile {
+        padding: 80px 24px;
+    }
+}
+
+.sectionHeader {
+    margin-bottom: 80px;
+
+    .sectionNum {
+        @include mix.section-label;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .sectionTitle {
+        @include mix.title-xl;
+        font-size: clamp(36px, 4vw, 56px);
+        letter-spacing: -2px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 12px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        em {
+            color: var(--accent);
+            font-style: normal;
+        }
+    }
+}
+
+.aboutGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+
+    @include mix.mobile {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+}
+
+.aboutText {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--muted);
+
+    p {
+        margin-bottom: 24px;
+    }
+
+    strong {
+        color: var(--text);
+        font-weight: 500;
+    }
+}
+
+.skillsGroup {
+    margin-bottom: 48px;
+
+    .groupTitle {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 20px;
+    }
+
+    .skillTags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
