@@ -16,10 +16,12 @@
   // Fontes
   --font-main: 'DM Mono', monospace;
   --font-title: 'Syne', sans-serif;
+
+  --max-width: 1400px;
 }
 
 [data-theme='light'] {
-  --bg: #f5f5f7;
+  --bg: #f1f1f1;
   --surface: #ffffff;
   --border: #e5e5e5;
   --accent: #8e29ec;

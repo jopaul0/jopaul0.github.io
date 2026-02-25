@@ -2,19 +2,9 @@
 @use '@/styles/mixins' as mix;
 
 .hero {
-  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding: 120px 60px 80px;
-  position: relative;
-  overflow: hidden;
   gap: 60px;
-
-  @include mix.mobile {
-    grid-template-columns: 1fr;
-    padding: 100px 24px 60px;
-  }
 
   &::after {
     content: '';

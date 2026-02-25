@@ -1,15 +1,6 @@
 @use '@/styles/variables' as vars;
 @use '@/styles/mixins' as mix;
 
-.projects {
-  padding: 120px 60px;
-  background: var(--bg);
-
-  @include mix.mobile {
-    padding: 80px 24px;
-  }
-}
-
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

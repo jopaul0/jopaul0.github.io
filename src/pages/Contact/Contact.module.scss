@@ -2,17 +2,9 @@
 @use '@/styles/mixins' as mix;
 
 .contact {
-    padding: 120px 60px;
-    background: var(--bg);
-    position: relative;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @include mix.mobile {
-        padding: 80px 24px;
-    }
 }
 
 .bgText {

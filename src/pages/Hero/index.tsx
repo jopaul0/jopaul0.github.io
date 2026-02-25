@@ -3,10 +3,11 @@ import { EmailIcon, GithubIcon, LinkedinIcon, UserIcon } from '@/components/Icon
 import { SimpleButton } from '@/components/SimpleButton';
 import { StatusBadge } from '@/components/StatusBadge';
 import { SocialLink } from '@/components/SocialLink';
+import { Section } from '@/components/Section';
 
 export const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <Section id="hero" containerClassName={styles.hero}>
       <div className={styles.heroLeft}>
         <StatusBadge
           variant="default"
@@ -58,6 +59,6 @@ export const Hero = () => {
           />
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

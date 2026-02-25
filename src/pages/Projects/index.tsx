@@ -3,6 +3,7 @@ import styles from './Projects.module.scss';
 import { SectionTitle } from '@/components/SectionTitle';
 import { Modal } from '@/components/Modal';
 import { SimpleButton } from '@/components/SimpleButton';
+import { Section } from '@/components/Section';
 
 import projectsData from '@/data/projects.json';
 
@@ -10,7 +11,7 @@ export const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<any>(null);
 
     return (
-        <section className={styles.projects} id="projetos">
+        <Section id="projetos">
             <SectionTitle number="03 — PROJETOS" title={<>O que <em>construí</em></>} />
 
             <div className={styles.projectsGrid}>
@@ -62,6 +63,6 @@ export const Projects = () => {
                     </div>
                 </Modal>
             )}
-        </section>
+        </Section>
     );
 };

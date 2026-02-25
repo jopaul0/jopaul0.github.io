@@ -54,3 +54,9 @@ body {
     opacity: 0.4;
   }
 }
+
+.container-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}

@@ -6,6 +6,7 @@ import { InputText, TextArea } from '@/components/Input';
 import { sendContactEmail } from '@/services/Web3Forms';
 import type { ContactFormData } from '@/services/Web3Forms/interface';
 import { validateEmail, validateRequired, validateMessageLength } from '@/utils/validation';
+import { Section } from '@/components/Section';
 
 export const Contact = () => {
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -46,7 +47,7 @@ export const Contact = () => {
     };
 
     return (
-        <section className={styles.contact} id="contato">
+        <Section id="contato" containerClassName={styles.contact}>
             <div className={styles.bgText}>CONTATO</div>
             <SectionTitle number="04 — CONTATO" title={<>Vamos <em>conversar?</em></>} />
 
@@ -66,6 +67,6 @@ export const Contact = () => {
                     </p>
                 )}
             </form>
-        </section>
+        </Section>
     );
 };
