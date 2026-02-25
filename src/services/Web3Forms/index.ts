@@ -1,7 +1,7 @@
 import type { ContactFormData } from './interface';
 
 const WEB3FORMS_API_URL = "https://api.web3forms.com/submit";
-const ACCESS_KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
+const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 export const sendContactEmail = async (data: ContactFormData) => {
     if (!ACCESS_KEY) {
