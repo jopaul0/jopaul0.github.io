@@ -26,10 +26,10 @@ Este roadmap descreve as etapas técnicas para a construção de um portfólio r
 ## Fase 3: Seções de Interface (UI)
 - [X] **Hero Section:** Introdução de impacto, título dinâmico e Call to Action (CTA).
 - [X] **About Me:** Texto sobre formação acadêmica na FATEC, experiência com Java/Python e uso de Linux Mint.
-- [ ] **Skills Section:** Grid organizado por categorias (Frontend, Backend, Ferramentas) com ícones.
-- [ ] **Projects Section:** - [ ] Componente `ProjectCard.tsx` com tipos definidos.
+- [X] **Skills Section:** Grid organizado por categorias (Frontend, Backend, Ferramentas) com ícones.
+- [X] **Projects Section:** - [ ] Componente `ProjectCard.tsx` com tipos definidos.
     - [ ] Listagem de projetos (Enlace, SAMA, Gerador de Artigos).
-    - [ ] Efeitos de hover e transições suaves com Sass.
+    - [X] Efeitos de hover e transições suaves com Sass.
 
 ## Fase 4: Comunicação (Contact)
 - [ ] **Formulário de Contato:** Criação do componente com validação de campos via TypeScript.
