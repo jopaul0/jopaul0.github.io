@@ -1,0 +1,82 @@
+@use '@/styles/variables' as vars;
+@use '@/styles/mixins' as mix;
+
+.contact {
+    padding: 120px 60px;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mix.mobile {
+        padding: 80px 24px;
+    }
+}
+
+.bgText {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-weight: 800;
+    font-family: var(--font-title);
+    font-size: clamp(60px, 12vw, 180px);
+    color: var(--text);
+    opacity: 0.02;
+    pointer-events: none;
+    white-space: nowrap;
+
+    z-index: 0;
+    letter-spacing: -0.05em;
+}
+
+.formContainer {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+        @include mix.section-label;
+        font-size: 10px;
+    }
+
+    input,
+    textarea {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 16px;
+        color: var(--text);
+        font-family: var(--font-main);
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+    }
+
+    textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+}
+
+.statusMsg {
+    font-size: 12px;
+    text-align: center;
+    color: var(--accent);
+    margin-top: 10px;
+}
