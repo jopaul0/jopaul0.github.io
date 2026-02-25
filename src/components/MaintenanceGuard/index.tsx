@@ -7,7 +7,7 @@ export const MaintenanceGuard = () => {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'h') {
         setIsLocked(false);
         sessionStorage.setItem('dev_access', 'granted');
       }
