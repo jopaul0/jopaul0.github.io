@@ -32,9 +32,9 @@ Este roadmap descreve as etapas técnicas para a construção de um portfólio r
     - [X] Efeitos de hover e transições suaves com Sass.
 
 ## Fase 4: Comunicação (Contact)
-- [ ] **Formulário de Contato:** Criação do componente com validação de campos via TypeScript.
-- [ ] **Integração sem Backend:** Configuração do Web3Forms ou EmailJS para envio de e-mails direto para sua caixa de entrada.
-- [ ] **Estados de UI:** Implementar animações de carregamento (loading) e mensagens de sucesso/erro após o envio.
+- [X] **Formulário de Contato:** Criação do componente com validação de campos via TypeScript.
+- [X] **Integração sem Backend:** Configuração do Web3Forms ou EmailJS para envio de e-mails direto para sua caixa de entrada.
+- [X] **Estados de UI:** Implementar animações de carregamento (loading) e mensagens de sucesso/erro após o envio.
 
 ## Fase 5: Finalização e Deploy
 - [ ] **Responsividade Crítica:** Ajuste fino de todos os componentes para telas pequenas.
