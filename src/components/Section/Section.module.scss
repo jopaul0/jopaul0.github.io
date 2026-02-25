@@ -6,24 +6,23 @@
   padding: 120px 60px;
   overflow: hidden;
   position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.2, 0.6, 0.2, 1),
+    transform 1s cubic-bezier(0.2, 0.6, 0.2, 1);
 
   @include mix.mobile {
     padding: 80px 24px;
   }
-}
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: sectionReveal 0.8s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
-}
-
-@keyframes sectionReveal {
-  to {
+  &.visible {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
 }
