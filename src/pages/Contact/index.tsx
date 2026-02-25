@@ -2,60 +2,51 @@ import { useState } from 'react';
 import styles from './Contact.module.scss';
 import { SectionTitle } from '@/components/SectionTitle';
 import { SimpleButton } from '@/components/SimpleButton';
+import { Input } from '@/components/Input';
 
 export const Contact = () => {
-  const [result, setResult] = useState("");
+    const [result, setResult] = useState("");
 
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setResult("A enviar...");
-    const formData = new FormData(event.currentTarget);
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setResult("A enviar...");
+        const formData = new FormData(event.currentTarget);
 
-    // Substitui pela tua chave do Web3Forms
-    formData.append("access_key", "TEU_ACCESS_KEY_AQUI");
+        // Substitui pela tua chave do Web3Forms
+        formData.append("access_key", "TEU_ACCESS_KEY_AQUI");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
 
-    const data = await response.json();
+        const data = await response.json();
 
-    if (data.success) {
-      setResult("Mensagem enviada com sucesso!");
-      (event.target as HTMLFormElement).reset();
-    } else {
-      console.log("Erro:", data);
-      setResult(data.message);
-    }
-  };
+        if (data.success) {
+            setResult("Mensagem enviada com sucesso!");
+            (event.target as HTMLFormElement).reset();
+        } else {
+            console.log("Erro:", data);
+            setResult(data.message);
+        }
+    };
 
-  return (
-    <section className={styles.contact} id="contato">
-      <div className={styles.bgText}>CONTATO</div>
-      
-      <SectionTitle number="04 — CONTATO" title={<>Vamos <em>conversar?</em></>} />
+    return (
+        <section className={styles.contact} id="contato">
+            <div className={styles.bgText}>CONTATO</div>
 
-      <form className={styles.formContainer} onSubmit={onSubmit}>
-        <div className={styles.formGroup}>
-          <label htmlFor="name">Nome</label>
-          <input type="text" name="name" id="name" required placeholder="Teu nome completo" />
-        </div>
+            <SectionTitle number="04 — CONTATO" title={<>Vamos <em>conversar?</em></>} />
 
-        <div className={styles.formGroup}>
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" required placeholder="teu@email.com" />
-        </div>
+            <form className={styles.formContainer} onSubmit={onSubmit}>
 
-        <div className={styles.formGroup}>
-          <label htmlFor="message">Mensagem</label>
-          <textarea name="message" id="message" required placeholder="Como posso ajudar?"></textarea>
-        </div>
+                <Input label="Nome" name="name" type="text" placeholder="Teu nome completo" required />
+                <Input label="Email" name="email" type="email" placeholder="teu@email.com" required />
+                <Input label="Mensagem" name="message" type="textarea" placeholder="Como posso ajudar?" required />
 
-        <SimpleButton label="ENVIAR MENSAGEM" />
-        
-        {result && <p className={styles.statusMsg}>{result}</p>}
-      </form>
-    </section>
-  );
+                <SimpleButton label="ENVIAR MENSAGEM" />
+
+                {result && <p className={styles.statusMsg}>{result}</p>}
+            </form>
+        </section>
+    );
 };
