@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "name": "Blog Generator — Gemini AI",
+        "shortDesc": "Plugin WordPress com API do Gemini para automação de conteúdo.",
+        "fullDesc": "Desenvolvido com arquitetura MVC em PHP, este plugin integra inteligência artificial para gerar artigos otimizados diretamente no WordPress.",
+        "techs": [
+            "PHP",
+            "Gemini API",
+            "MVC",
+            "WordPress"
+        ],
+        "github": "https://github.com/jopaul0/blog-generator-wp-plugin"
+    },
+    {
+        "id": 2,
+        "name": "SAMA",
+        "shortDesc": "Sistema de gestão de atestados e equipas ágeis.",
+        "fullDesc": "Projeto académico desenvolvido na FATEC utilizando Python para automatizar processos de RH e monitorização de saúde de equipas.",
+        "techs": [
+            "Python",
+            "Flask",
+            "SQLite"
+        ],
+        "github": "https://github.com/jopaul0/sama"
+    },
+    {
+        "id": 3,
+        "name": "PDI",
+        "shortDesc": "Plataforma de Plano de Desenvolvimento Individual.",
+        "fullDesc": "Aplicação desenvolvida em Java e JavaFX para acompanhamento de metas de carreira e evolução técnica.",
+        "techs": [
+            "Java",
+            "JavaFX",
+            "MySQL"
+        ],
+        "github": "https://github.com/jopaul0/pdi"
+    },
+    {
+        "id": 4,
+        "name": "Enlace",
+        "shortDesc": "Sistema desktop para gestão de reuniões e atas corporativas.",
+        "fullDesc": "Aplicação robusta em Java com MySQL, focada na organização de pautas, participantes e geração de atas de reunião.",
+        "techs": [
+            "Java",
+            "MySQL",
+            "JDBC"
+        ],
+        "github": "https://github.com/jopaul0/enlace"
+    },
+    {
+        "id": 5,
+        "name": "Cantina Online",
+        "shortDesc": "Sistema de gestão de pedidos para cantinas escolares.",
+        "fullDesc": "Projeto desenvolvido para TCC utilizando PHP e MySQL para facilitar a reserva e compra de lanches online.",
+        "techs": [
+            "PHP",
+            "MySQL",
+            "Web"
+        ],
+        "github": "https://github.com/jopaul0/cantinaonline-tcc"
+    }
+]

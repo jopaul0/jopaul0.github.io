@@ -1,16 +1,7 @@
 import { SectionTitle } from '@/components/SectionTitle';
 import styles from './Experience.module.scss';
 import { StatusBadge } from '@/components/StatusBadge';
-
-const experiences = [
-  {
-    period: "Maio 2025 — Atual",
-    role: "Freelancer IT / Estagiário",
-    company: "OnVale Contabilidade",
-    desc: "Responsável pela manutenção de máquinas, desenvolvimento de sites em WordPress, criação de aplicações em JavaScript e suporte em marketing digital.",
-    techs: ["WordPress", "JavaScript", "Manutenção", "Marketing"]
-  }
-];
+import experiences from '@/data/experiences.json';
 
 export const Experience = () => {
   return (

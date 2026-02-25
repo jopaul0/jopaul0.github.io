@@ -2,23 +2,9 @@ import { SectionTitle } from '@/components/SectionTitle';
 import styles from './About.module.scss';
 import { StatusBadge } from '@/components/StatusBadge';
 
+import skillsData from '@/data/skills.json';
+
 export const About = () => {
-
-    const skillsData = [
-        {
-            title: "Backend",
-            skills: ["Java", "Spring Boot", "SQL / MySQL", "Python", "Flask", "Node.js", "REST APIs"]
-        },
-        {
-            title: "Frontend",
-            skills: ["HTML / CSS", "JavaScript", "Sass", "TypeScript", "Vite", "React", "Tailwind CSS"]
-        },
-        {
-            title: "Ferramentas & Fluxo",
-            skills: ["Git / GitHub", "Docker", "Linux", "Scrum", "Figma", "WordPress"]
-        }
-    ];
-
     return (
         <section className={styles.about} id="sobre">
             <div className={styles.sectionHeader}>
