@@ -6,10 +6,11 @@ export const StatusBadge = ({
   label = "Open to work", 
   variant = 'default', 
   noDot = false,
+  interactive = false,
   className = "" 
 }: StatusBadgeProps) => {
   return (
-    <div className={`${styles.badge} ${styles[variant]} ${className}`}>
+    <div className={`${styles.badge} ${styles[variant]} ${interactive ? styles.interactive : ""} ${className}`}>
       <span className={`${styles.dot} ${noDot ? styles.noDot : ""}`}></span>
       {label}
     </div>

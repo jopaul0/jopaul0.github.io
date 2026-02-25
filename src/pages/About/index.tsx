@@ -26,7 +26,7 @@ export const About = () => {
                     <div className={styles.skillsGroup}>
                         <div className={styles.groupTitle}>Tecnologias de Foco</div>
                         <div className={styles.skillTags}>
-                            <StatusBadge label="Java" variant="default" noDot />
+                            <StatusBadge label="Java" variant="filled" noDot interactive />
                             <StatusBadge label="Spring Boot" variant="default" noDot />
                             <StatusBadge label="SQL / MySQL" variant="default" noDot />
                             <StatusBadge label="Python" variant="default" noDot />
