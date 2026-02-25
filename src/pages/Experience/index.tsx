@@ -2,10 +2,11 @@ import { SectionTitle } from '@/components/SectionTitle';
 import styles from './Experience.module.scss';
 import { StatusBadge } from '@/components/StatusBadge';
 import experiences from '@/data/experiences.json';
+import { Section } from '@/components/Section';
 
 export const Experience = () => {
   return (
-    <section className={styles.experience} id="experiencia">
+    <Section id="experiencia" sectionClassName={styles.experience} noGlow>
       <div className={styles.sectionHeader}>
         <SectionTitle number="02 — Experiência" title={<>Onde <em>trabalhei</em></>} />
       </div>
@@ -28,6 +29,6 @@ export const Experience = () => {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 };
