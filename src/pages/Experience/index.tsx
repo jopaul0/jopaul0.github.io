@@ -1,3 +1,4 @@
+import { SectionTitle } from '@/components/SectionTitle';
 import styles from './Experience.module.scss';
 import { StatusBadge } from '@/components/StatusBadge';
 
@@ -15,8 +16,7 @@ export const Experience = () => {
   return (
     <section className={styles.experience} id="experiencia">
       <div className={styles.sectionHeader}>
-        <span className={styles.sectionNum}>02 — Experiência</span>
-        <h2 className={styles.sectionTitle}>Onde trabalhei</h2>
+        <SectionTitle number="02 — Experiência" title={<>Onde <em>trabalhei</em></>} />
       </div>
 
       <div className={styles.expList}>

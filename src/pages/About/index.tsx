@@ -1,3 +1,4 @@
+import { SectionTitle } from '@/components/SectionTitle';
 import styles from './About.module.scss';
 import { StatusBadge } from '@/components/StatusBadge';
 
@@ -21,8 +22,7 @@ export const About = () => {
     return (
         <section className={styles.about} id="sobre">
             <div className={styles.sectionHeader}>
-                <span className={styles.sectionNum}>01 — Sobre</span>
-                <h2 className={styles.sectionTitle}>Quem sou <em>eu</em></h2>
+                <SectionTitle number="01 — Sobre Mim" title={<>Quem sou <em>eu</em></>} />
             </div>
 
             <div className={styles.aboutGrid}>
