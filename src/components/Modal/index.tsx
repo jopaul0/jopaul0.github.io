@@ -1,23 +1,38 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './Modal.module.scss';
 import type { ModalProps } from './interface';
 
-export const Modal = ({ isOpen, onClose, title, children, noHeader=false}: ModalProps) => {
+export const Modal = ({ isOpen, onClose, title, children, noHeader = false }: ModalProps) => {
+  const [shouldRender, setShouldRender] = useState(isOpen);
+  const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
+      setShouldRender(true);
+      setIsClosing(false);
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
+    } else if (shouldRender) {
+      setIsClosing(true);
+      const timer = setTimeout(() => {
+        setShouldRender(false);
+        setIsClosing(false);
+      }, 200);
+      return () => clearTimeout(timer);
     }
-    return () => { document.body.style.overflow = 'unset'; };
-  }, [isOpen]);
+  }, [isOpen, shouldRender]);
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    return () => { document.body.style.overflow = 'unset'; };
+  }, []);
+
+  if (!shouldRender) return null;
 
   return createPortal(
-    <div className={styles.overlay} onClick={onClose}>
+    <div 
+      className={`${styles.overlay} ${isClosing ? styles.isClosing : ''}`} 
+      onClick={onClose}
+    >
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <header className={`${styles.header} ${noHeader ? styles.noHeader : ''}`}>
           <h2 className={styles.title}>{title}</h2>
