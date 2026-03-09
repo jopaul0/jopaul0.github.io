@@ -90,30 +90,4 @@
   transition: transform 0.5s ease;
 }
 
-.projectCard:hover .bannerImg {
-  transform: scale(1.05);
-}
 
-.imagesGrid {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-top: 20px;
-
-  .galleryItem {
-    margin: 0;
-    img {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-    }
-    figcaption {
-      font-size: 11px;
-      color: var(--muted);
-      text-align: center;
-      margin-top: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-  }
-}

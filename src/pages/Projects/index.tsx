@@ -7,6 +7,7 @@ import { Section } from '@/components/Section';
 import type { ProjectData } from './interface';
 
 import projectsData from '@/data/projects.json';
+import { Gallery } from '@/components/Gallery';
 
 export const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
@@ -49,15 +50,7 @@ export const Projects = () => {
                     <div className={styles.modalGallery}>
                         <p className={styles.shortDesc}>{selectedProject.fullDesc}</p>
 
-                        {/* Galeria de Imagens dentro do Modal */}
-                        <div className={styles.imagesGrid}>
-                            {selectedProject.images.map((img, idx) => (
-                                <figure key={idx} className={styles.galleryItem}>
-                                    <img src={img.url} alt={img.caption || selectedProject.name} />
-                                    {img.caption && <figcaption>{img.caption}</figcaption>}
-                                </figure>
-                            ))}
-                        </div>
+                        <Gallery images={selectedProject.images} />
 
                         <div className={styles.actions}>
                             <SimpleButton
