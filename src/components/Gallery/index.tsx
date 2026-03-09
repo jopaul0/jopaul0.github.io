@@ -5,6 +5,15 @@ import type { GalleryProps } from './interface';
 export const Gallery = ({ images }: GalleryProps) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
+    // Verificação de segurança para projetos sem imagens
+    if (!images || images.length === 0) {
+        return (
+            <div className={styles.noImages}>
+                <p>Nenhuma imagem disponível para este projeto.</p>
+            </div>
+        );
+    }
+
     return (
         <div className={styles.pdpContainer}>
             {/* Lado Esquerdo: Visualização Principal */}
@@ -13,7 +22,7 @@ export const Gallery = ({ images }: GalleryProps) => {
                     <img 
                         src={images[activeIndex].url} 
                         alt={images[activeIndex].caption || "Project view"} 
-                        key={activeIndex} // Key força o re-render para disparar a animação CSS
+                        key={activeIndex} 
                         className={styles.fadeIn}
                     />
                 </div>
@@ -31,7 +40,6 @@ export const Gallery = ({ images }: GalleryProps) => {
                         onClick={() => setActiveIndex(idx)}
                     >
                         <img src={img.url} alt={`Thumbnail ${idx + 1}`} />
-                        <div className={styles.overlay} />
                     </button>
                 ))}
             </aside>
