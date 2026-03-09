@@ -20,9 +20,17 @@
   position: relative;
   overflow: hidden;
 
-  &.large { grid-column: span 7; }
-  &.medium { grid-column: span 5; }
-  &.small { grid-column: span 4; }
+  &.large {
+    grid-column: span 7;
+  }
+
+  &.medium {
+    grid-column: span 5;
+  }
+
+  &.small {
+    grid-column: span 4;
+  }
 
   @include mix.mobile {
     grid-column: span 1 !important;
@@ -90,4 +98,9 @@
   transition: transform 0.5s ease;
 }
 
-
+.loadMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  width: 100%;
+}

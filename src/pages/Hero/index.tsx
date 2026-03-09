@@ -1,11 +1,22 @@
 import styles from './Hero.module.scss';
-import { EmailIcon, GithubIcon, LinkedinIcon, UserIcon } from '@/components/Icons';
+import { EmailIcon, GithubIcon, LinkedinIcon } from '@/components/Icons'; // Removemos o UserIcon daqui
 import { SimpleButton } from '@/components/SimpleButton';
 import { StatusBadge } from '@/components/StatusBadge';
 import { SocialLink } from '@/components/SocialLink';
 import { Section } from '@/components/Section';
 
 export const Hero = () => {
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/cv-joao-paulo.pdf';
+    link.download = 'Curriculo_Joao_Paulo_Santos.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
   return (
     <Section id="hero" containerClassName={styles.hero}>
       <div className={styles.heroLeft}>
@@ -26,11 +37,9 @@ export const Hero = () => {
         </p>
 
         <div className={styles.heroButtons}>
-          <SimpleButton label="Ver Projetos ↓" onClick={() => { }} />
-          <SimpleButton outline label="Download CV →" onClick={() => { }} />
+          <SimpleButton label="Ver Projetos ↓" onClick={() => { document.getElementById('projetos')?.scrollIntoView({ behavior: 'smooth' }) }} />
+          <SimpleButton outline label="Download CV →" onClick={handleDownloadCV} />
         </div>
-
-
 
         <div className={styles.heroStats}>
           <SocialLink href="https://github.com/jopaul0" label="GitHub" label2="@jopaul0" icon={<GithubIcon />} />
@@ -43,10 +52,13 @@ export const Hero = () => {
         <div className={styles.photoFrame}>
           <div className={styles.cornerDeco}></div>
           <div className={styles.cornerDeco2}></div>
-          <div className={styles.photoPlaceholder}>
-            <UserIcon />
-            <span>João Paulo</span>
-          </div>
+
+          <img
+            src="https://github.com/jopaul0.png"
+            alt="Foto de João Paulo"
+            className={styles.profileImage}
+          />
+
           <StatusBadge
             variant="filled"
             className={styles.photoTag}
