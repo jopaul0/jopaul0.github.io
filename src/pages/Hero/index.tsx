@@ -6,6 +6,17 @@ import { SocialLink } from '@/components/SocialLink';
 import { Section } from '@/components/Section';
 
 export const Hero = () => {
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/cv-joao-paulo.pdf';
+    link.download = 'Curriculo_Joao_Paulo_Santos.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
   return (
     <Section id="hero" containerClassName={styles.hero}>
       <div className={styles.heroLeft}>
@@ -27,7 +38,7 @@ export const Hero = () => {
 
         <div className={styles.heroButtons}>
           <SimpleButton label="Ver Projetos ↓" onClick={() => { document.getElementById('projetos')?.scrollIntoView({ behavior: 'smooth' }) }} />
-          <SimpleButton outline label="Download CV →" onClick={() => { }} />
+          <SimpleButton outline label="Download CV →" onClick={handleDownloadCV} />
         </div>
 
         <div className={styles.heroStats}>
@@ -41,10 +52,10 @@ export const Hero = () => {
         <div className={styles.photoFrame}>
           <div className={styles.cornerDeco}></div>
           <div className={styles.cornerDeco2}></div>
-          
-          <img 
-            src="https://github.com/jopaul0.png" 
-            alt="Foto de João Paulo" 
+
+          <img
+            src="https://github.com/jopaul0.png"
+            alt="Foto de João Paulo"
             className={styles.profileImage}
           />
 
