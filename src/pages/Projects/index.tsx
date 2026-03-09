@@ -11,6 +11,17 @@ import { Gallery } from '@/components/Gallery';
 
 export const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
+    const [displayedProject, setDisplayedProject] = useState<ProjectData | null>(null);
+
+    const handleOpen = (project: ProjectData) => {
+        setSelectedProject(project);
+        setDisplayedProject(project);
+    };
+
+    const handleClose = () => {
+        setSelectedProject(null);
+        setTimeout(() => setDisplayedProject(null), 350);
+    };
 
     return (
         <Section id="projetos">
@@ -26,9 +37,8 @@ export const Projects = () => {
                         <div
                             key={project.id}
                             className={`${styles.projectCard} ${sizeClass}`}
-                            onClick={() => setSelectedProject(project)}
+                            onClick={() => handleOpen(project)}
                         >
-                            {/* Renderiza a imagem de capa (banner) */}
                             <div className={styles.imagePreview}>
                                 <img src={project.banner} alt={project.name} className={styles.bannerImg} />
                             </div>
@@ -41,29 +51,33 @@ export const Projects = () => {
                 })}
             </div>
 
-            {selectedProject && (
-                <Modal
-                    isOpen={!!selectedProject}
-                    onClose={() => setSelectedProject(null)}
-                    title={selectedProject.name}
-                >
+            <Modal
+                isOpen={!!selectedProject}
+                onClose={handleClose}
+                title={displayedProject?.name ?? ''}
+            >
+                {displayedProject && (
                     <div className={styles.modalGallery}>
-                        <p className={styles.shortDesc}>{selectedProject.fullDesc}</p>
+                        <p className={styles.shortDesc}>{displayedProject.fullDesc}</p>
 
-                        <Gallery images={selectedProject.images} />
+                        <Gallery images={displayedProject.images} />
 
                         <div className={styles.actions}>
                             <SimpleButton
                                 label="Ver no GitHub"
-                                onClick={() => window.open(selectedProject.github, '_blank')}
+                                onClick={() => window.open(displayedProject.github, '_blank')}
                             />
-                            {selectedProject.demo && (
-                                <SimpleButton outline label="Visualizar Demo" onClick={() => window.open(selectedProject.demo, '_blank')} />
+                            {displayedProject.demo && (
+                                <SimpleButton
+                                    outline
+                                    label="Visualizar Demo"
+                                    onClick={() => window.open(displayedProject.demo, '_blank')}
+                                />
                             )}
                         </div>
                     </div>
-                </Modal>
-            )}
+                )}
+            </Modal>
         </Section>
     );
 };

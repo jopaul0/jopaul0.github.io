@@ -12,7 +12,7 @@ export const Modal = ({ isOpen, onClose, title, children, noHeader = false }: Mo
       setShouldRender(true);
       setIsClosing(false);
       document.body.style.overflow = 'hidden';
-    } else if (shouldRender) { 
+    } else if (shouldRender) {
       setIsClosing(true);
       document.body.style.overflow = 'unset';
 
@@ -36,8 +36,8 @@ export const Modal = ({ isOpen, onClose, title, children, noHeader = false }: Mo
       className={`${styles.overlay} ${isClosing ? styles.isClosingOverlay : ''}`}
       onClick={onClose}
     >
-      <div 
-        className={`${styles.modal} ${isClosing ? styles.isClosingModal : ''}`} 
+      <div
+        className={`${styles.modal} ${isClosing ? styles.isClosingModal : ''}`}
         onClick={(e) => e.stopPropagation()}
       >
         {!noHeader && (
