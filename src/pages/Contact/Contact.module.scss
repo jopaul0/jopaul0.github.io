@@ -2,7 +2,7 @@
 @use '@/styles/mixins' as mix;
 
 .contactSection{
-    border-top: 60px solid var(--surface);
+    background-color: var(--surface);
 }
 
 .contactContainer {

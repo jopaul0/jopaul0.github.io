@@ -25,7 +25,6 @@ export const Experience = () => {
                 ))}
               </div>
             </div>
-            <div className={styles.arrow}>→</div>
           </div>
         ))}
       </div>

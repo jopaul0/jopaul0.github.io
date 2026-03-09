@@ -12,6 +12,7 @@
     .heroLeft {
       align-items: center;
       text-align: center;
+
       .heroLabel {
         align-self: center;
       }
@@ -82,6 +83,14 @@
     position: relative;
     width: 380px;
     height: 460px;
+
+    .profileImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
 
     .photoPlaceholder {
       width: 100%;
