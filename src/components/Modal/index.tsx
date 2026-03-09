@@ -12,12 +12,15 @@ export const Modal = ({ isOpen, onClose, title, children, noHeader = false }: Mo
       setShouldRender(true);
       setIsClosing(false);
       document.body.style.overflow = 'hidden';
-    } else if (shouldRender) {
+    } else if (shouldRender) { 
       setIsClosing(true);
+      document.body.style.overflow = 'unset';
+
       const timer = setTimeout(() => {
         setShouldRender(false);
         setIsClosing(false);
-      }, 200);
+      }, 350);
+
       return () => clearTimeout(timer);
     }
   }, [isOpen, shouldRender]);
@@ -29,17 +32,22 @@ export const Modal = ({ isOpen, onClose, title, children, noHeader = false }: Mo
   if (!shouldRender) return null;
 
   return createPortal(
-    <div 
-      className={`${styles.overlay} ${isClosing ? styles.isClosing : ''}`} 
+    <div
+      className={`${styles.overlay} ${isClosing ? styles.isClosingOverlay : ''}`}
       onClick={onClose}
     >
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <header className={`${styles.header} ${noHeader ? styles.noHeader : ''}`}>
-          <h2 className={styles.title}>{title}</h2>
-          <button className={styles.closeButton} onClick={onClose} aria-label="Fechar">
-            &times;
-          </button>
-        </header>
+      <div 
+        className={`${styles.modal} ${isClosing ? styles.isClosingModal : ''}`} 
+        onClick={(e) => e.stopPropagation()}
+      >
+        {!noHeader && (
+          <header className={styles.header}>
+            <h2 className={styles.title}>{title}</h2>
+            <button className={styles.closeButton} onClick={onClose} aria-label="Fechar">
+              &times;
+            </button>
+          </header>
+        )}
         <div className={styles.content}>
           {children}
         </div>
