@@ -3,69 +3,38 @@ import styles from './Gallery.module.scss';
 import type { GalleryProps } from './interface';
 
 export const Gallery = ({ images }: GalleryProps) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isExiting, setIsExiting] = useState(false);
-    const [direction, setDirection] = useState<'next' | 'prev'>('next');
-
-    const navigate = (newDirection: 'next' | 'prev') => {
-        if (isExiting) return;
-
-        setDirection(newDirection);
-        setIsExiting(true);
-
-        setTimeout(() => {
-            if (newDirection === 'next') {
-                setCurrentIndex((prev) => (prev + 1) % images.length);
-            } else {
-                setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-            }
-            setIsExiting(false);
-        }, 300);
-    };
+    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className={styles.galleryContainer}>
-            <div className={styles.displayWindow}>
-                <div className={`
-                    ${styles.slide} 
-                    ${isExiting ? styles.exit : styles.enter} 
-                    ${styles[direction]}
-                `}>
-                    <img
-                        src={images[currentIndex].url}
-                        alt={images[currentIndex].caption || "Project screenshot"}
+        <div className={styles.pdpContainer}>
+            {/* Lado Esquerdo: Visualização Principal */}
+            <div className={styles.mainDisplay}>
+                <div className={styles.mainImageWrapper}>
+                    <img 
+                        src={images[activeIndex].url} 
+                        alt={images[activeIndex].caption || "Project view"} 
+                        key={activeIndex} // Key força o re-render para disparar a animação CSS
+                        className={styles.fadeIn}
                     />
                 </div>
-
-                {images.length > 1 && (
-                    <div className={styles.controls}>
-                        <button onClick={() => navigate('prev')} aria-label="Anterior">←</button>
-                        <button onClick={() => navigate('next')} aria-label="Próximo">→</button>
-                    </div>
+                {images[activeIndex].caption && (
+                    <p className={styles.mainCaption}>{images[activeIndex].caption}</p>
                 )}
             </div>
 
-            <div className={styles.info}>
-                <span className={styles.counter}>
-                    {currentIndex + 1} / {images.length}
-                </span>
-                {images[currentIndex].caption && (
-                    <p className={styles.caption}>{images[currentIndex].caption}</p>
-                )}
-            </div>
-
-            <div className={styles.dots}>
-                {images.map((_, idx) => (
+            {/* Lado Direito: Miniaturas Verticais */}
+            <aside className={styles.thumbnailsSidebar}>
+                {images.map((img, idx) => (
                     <button
                         key={idx}
-                        className={`${styles.dot} ${idx === currentIndex ? styles.active : ''}`}
-                        onClick={() => {
-                            setDirection(idx > currentIndex ? 'next' : 'prev');
-                            setCurrentIndex(idx);
-                        }}
-                    />
+                        className={`${styles.thumbBtn} ${idx === activeIndex ? styles.active : ''}`}
+                        onClick={() => setActiveIndex(idx)}
+                    >
+                        <img src={img.url} alt={`Thumbnail ${idx + 1}`} />
+                        <div className={styles.overlay} />
+                    </button>
                 ))}
-            </div>
+            </aside>
         </div>
     );
 };
