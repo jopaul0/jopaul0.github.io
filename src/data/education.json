@@ -1,7 +1,7 @@
 {
   "academic": [
     {
-      "institution": "Instituição de Ensino",
+      "institution": "Colégio Técnico Opção",
       "course": "Técnico em Informática",
       "period": "Concluído",
       "type": "Ensino Técnico"
@@ -15,14 +15,14 @@
   ],
   "courses": [
     {
-      "name": "Desenvolvimento Backend com Java e Spring Boot",
-      "platform": "Curso Livre",
-      "hours": "Em andamento"
+      "name": "Docker: criando e gerenciando containers",
+      "platform": "Alura",
+      "hours": "10 horas"
     },
     {
-      "name": "DevOps, Docker e CI/CD",
-      "platform": "Curso Livre",
-      "hours": "Concluído"
+      "name": "SEO: otimização de sites",
+      "platform": "Alura",
+      "hours": "8 horas"
     }
   ]
 }
