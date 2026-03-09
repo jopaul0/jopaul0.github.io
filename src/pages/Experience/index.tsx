@@ -8,7 +8,7 @@ export const Experience = () => {
   return (
     <Section id="experiencia" sectionClassName={styles.experience} noGlow>
       <div className={styles.sectionHeader}>
-        <SectionTitle number="02 — Experiência" title={<>Onde <em>trabalhei</em></>} />
+        <SectionTitle number="03 — Experiência" title={<>Onde <em>trabalhei</em></>} />
       </div>
 
       <div className={styles.expList}>

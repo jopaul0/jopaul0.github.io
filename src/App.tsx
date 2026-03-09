@@ -5,16 +5,18 @@ import { About } from '@/pages/About';
 import { Experience } from '@/pages/Experience';
 import { Projects } from '@/pages/Projects';
 import { Contact } from '@/pages/Contact';
-import { MaintenanceGuard } from '@/components/MaintenanceGuard';
+import { Education } from '@/pages/Education';
+// import { MaintenanceGuard } from '@/components/MaintenanceGuard';
 
 function App() {
   return (
     <>
-      <MaintenanceGuard />
+      {/* <MaintenanceGuard /> */}
       <MainLayout>
         <Hero />
         <Marquee />
         <About />
+        <Education />
         <Experience />
         <Projects />
         <Contact />

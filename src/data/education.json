@@ -1,0 +1,28 @@
+{
+  "academic": [
+    {
+      "institution": "Colégio Técnico Opção",
+      "course": "Técnico em Informática",
+      "period": "Concluído",
+      "type": "Ensino Técnico"
+    },
+    {
+      "institution": "FATEC São José dos Campos",
+      "course": "Análise e Desenvolvimento de Sistemas (ADS)",
+      "period": "Em andamento (3º Semestre)",
+      "type": "Ensino Superior"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Docker: criando e gerenciando containers",
+      "platform": "Alura",
+      "hours": "10 horas"
+    },
+    {
+      "name": "SEO: otimização de sites",
+      "platform": "Alura",
+      "hours": "8 horas"
+    }
+  ]
+}
