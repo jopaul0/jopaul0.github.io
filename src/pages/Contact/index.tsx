@@ -49,7 +49,7 @@ export const Contact = () => {
     return (
         <Section id="contato" containerClassName={styles.contactContainer} sectionClassName={styles.contactSection} noGlow>
             <div className={styles.bgText}>CONTATO</div>
-            <SectionTitle number="04 — CONTATO" title={<>Vamos <em>conversar?</em></>} />
+            <SectionTitle number="05 — CONTATO" title={<>Vamos <em>conversar?</em></>} />
 
             <form className={styles.formContainer} onSubmit={onSubmit}>
                 <InputText label="Nome" name="name" placeholder="Teu nome completo" required error={errors.name} />
