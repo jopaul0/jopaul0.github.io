@@ -12,7 +12,7 @@
 // Scroll
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--accent) var(--bg);
+  scrollbar-color: var(--accent) transparent;
 }
 
 html {
@@ -24,7 +24,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -4,25 +4,23 @@ import { SectionTitle } from '@/components/SectionTitle';
 import { Modal } from '@/components/Modal';
 import { SimpleButton } from '@/components/SimpleButton';
 import { Section } from '@/components/Section';
+import type { ProjectData } from './interface';
 
 import projectsData from '@/data/projects.json';
+import { Gallery } from '@/components/Gallery';
 
 export const Projects = () => {
-    const [selectedProject, setSelectedProject] = useState<any>(null);
+    const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
 
     return (
         <Section id="projetos">
             <SectionTitle number="03 — PROJETOS" title={<>O que <em>construí</em></>} />
 
             <div className={styles.projectsGrid}>
-                {projectsData.map((project, index) => {
+                {(projectsData as ProjectData[]).map((project, index) => {
                     let sizeClass = styles.small;
-
-                    if (index === 0) {
-                        sizeClass = styles.large;
-                    } else if (index === 1) {
-                        sizeClass = styles.medium;
-                    }
+                    if (index === 0) sizeClass = styles.large;
+                    else if (index === 1) sizeClass = styles.medium;
 
                     return (
                         <div
@@ -30,7 +28,10 @@ export const Projects = () => {
                             className={`${styles.projectCard} ${sizeClass}`}
                             onClick={() => setSelectedProject(project)}
                         >
-                            <div className={styles.imagePreview}>Screenshot: {project.name}</div>
+                            {/* Renderiza a imagem de capa (banner) */}
+                            <div className={styles.imagePreview}>
+                                <img src={project.banner} alt={project.name} className={styles.bannerImg} />
+                            </div>
                             <div className={styles.content}>
                                 <h3 className={styles.name}>{project.name}</h3>
                                 <p className={styles.shortDesc}>{project.shortDesc}</p>
@@ -48,8 +49,8 @@ export const Projects = () => {
                 >
                     <div className={styles.modalGallery}>
                         <p className={styles.shortDesc}>{selectedProject.fullDesc}</p>
-                        {/* Espaço para as tuas imagens */}
-                        <div className={styles.imagePreview}>[Galeria de Imagens Aqui]</div>
+
+                        <Gallery images={selectedProject.images} />
 
                         <div className={styles.actions}>
                             <SimpleButton
@@ -57,7 +58,7 @@ export const Projects = () => {
                                 onClick={() => window.open(selectedProject.github, '_blank')}
                             />
                             {selectedProject.demo && (
-                                <SimpleButton outline label="Visualizar Demo" onClick={() => { }} />
+                                <SimpleButton outline label="Visualizar Demo" onClick={() => window.open(selectedProject.demo, '_blank')} />
                             )}
                         </div>
                     </div>
