@@ -6,12 +6,12 @@ import { Experience } from '@/pages/Experience';
 import { Projects } from '@/pages/Projects';
 import { Contact } from '@/pages/Contact';
 import { Education } from '@/pages/Education';
-import { MaintenanceGuard } from '@/components/MaintenanceGuard';
+// import { MaintenanceGuard } from '@/components/MaintenanceGuard';
 
 function App() {
   return (
     <>
-      <MaintenanceGuard />
+      {/* <MaintenanceGuard /> */}
       <MainLayout>
         <Hero />
         <Marquee />
