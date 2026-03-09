@@ -1,7 +1,7 @@
 [
   {
     "id": "blog-gen",
-    "name": "Blog Generator — Gemini AI",
+    "name": "Blog Generator",
     "repoName": "blog-generator-wp-plugin",
     "shortDesc": "Plugin WordPress com API do Gemini para automação de criação de conteúdo.",
     "fullDesc": "Desenvolvido com arquitetura MVC em PHP. Este plugin integra-se diretamente com a API do Google Gemini para gerar artigos formatados para o WordPress, otimizando o tempo de criação de conteúdo num formato prático e rápido.",
@@ -28,27 +28,13 @@
     ]
   },
   {
-    "id": "enlace",
-    "name": "Enlace",
-    "repoName": "enlace",
-    "shortDesc": "Aplicação desktop para a gestão eficiente de reuniões.",
-    "fullDesc": "Um sistema desktop robusto desenvolvido em Java para facilitar o agendamento, a gestão e a organização de reuniões, garantindo um controlo seguro dos compromissos e dos participantes ligados à base de dados MySQL.",
-    "techs": ["Java", "MySQL"],
-    "github": "https://github.com/jopaul0/enlace",
-    "banner": "https://placehold.co/800x450/111111/e0cd1d?text=Enlace",
-    "images": [
-      { "url": "https://placehold.co/800x450/111111/e0cd1d?text=Tela+Inicial", "caption": "Ecrã Principal" },
-      { "url": "https://placehold.co/800x450/111111/e0cd1d?text=Agendamento", "caption": "Gestão de Agendamentos" }
-    ]
-  },
-  {
     "id": "sama",
     "name": "SAMA",
     "repoName": "sama",
     "shortDesc": "Sistema de submissão de atestados médicos e avaliação de equipas.",
     "fullDesc": "Desenvolvido em Python utilizando a framework Flask, o SAMA centraliza a entrega e validação de atestados médicos, integrando também um módulo dedicado à avaliação de desempenho de equipas baseadas em metodologias ágeis.",
     "techs": ["Python", "Flask"],
-    "github": "https://github.com/jopaul0/sama",
+    "github": "https://github.com/dottecteam/SAMA",
     "banner": "https://placehold.co/800x450/111111/e0cd1d?text=SAMA",
     "images": [
       { "url": "https://placehold.co/800x450/111111/e0cd1d?text=Submissao", "caption": "Área de Submissão" },
@@ -62,7 +48,7 @@
     "shortDesc": "Aplicação desktop para Plano de Desenvolvimento Individual.",
     "fullDesc": "Ferramenta criada com JavaFX concebida para ajudar os utilizadores a traçar metas, acompanhar a evolução de competências e gerir o seu Plano de Desenvolvimento Individual (PDI) numa interface gráfica estruturada.",
     "techs": ["Java", "JavaFX", "MySQL"],
-    "github": "https://github.com/jopaul0/pdi",
+    "github": "https://github.com/dottecteam/PDI",
     "banner": "https://placehold.co/800x450/111111/e0cd1d?text=PDI",
     "images": [
       { "url": "https://placehold.co/800x450/111111/e0cd1d?text=Metas", "caption": "Gestão de Metas" }
@@ -75,7 +61,7 @@
     "shortDesc": "Sistema de gestão para cantinas (Projeto de TCC).",
     "fullDesc": "Projeto de conclusão de curso focado em digitalizar o processo de pedidos e a gestão de stock de uma cantina escolar. O sistema oferece um portal acessível para os estudantes realizarem pedidos e para os funcionários gerirem o fluxo de vendas.",
     "techs": ["PHP", "MySQL"],
-    "github": "https://github.com/jopaul0/cantina-online",
+    "github": "https://github.com/jopaul0/cantinaonline-tcc",
     "banner": "https://placehold.co/800x450/111111/e0cd1d?text=Cantina+Online",
     "images": [
       { "url": "https://placehold.co/800x450/111111/e0cd1d?text=Cardapio", "caption": "Visualização do Menu" },
