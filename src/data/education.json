@@ -1,16 +1,16 @@
 {
   "academic": [
     {
-      "institution": "FATEC São José dos Campos",
-      "course": "Análise e Desenvolvimento de Sistemas (ADS)",
-      "period": "Em andamento (3º Semestre)",
-      "type": "Ensino Superior"
-    },
-    {
       "institution": "Instituição de Ensino",
       "course": "Técnico em Informática",
       "period": "Concluído",
       "type": "Ensino Técnico"
+    },
+    {
+      "institution": "FATEC São José dos Campos",
+      "course": "Análise e Desenvolvimento de Sistemas (ADS)",
+      "period": "Em andamento (3º Semestre)",
+      "type": "Ensino Superior"
     }
   ],
   "courses": [

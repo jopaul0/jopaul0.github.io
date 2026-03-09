@@ -5,6 +5,7 @@ import { About } from '@/pages/About';
 import { Experience } from '@/pages/Experience';
 import { Projects } from '@/pages/Projects';
 import { Contact } from '@/pages/Contact';
+import { Education } from '@/pages/Education';
 import { MaintenanceGuard } from '@/components/MaintenanceGuard';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <Marquee />
         <About />
+        <Education />
         <Experience />
         <Projects />
         <Contact />
