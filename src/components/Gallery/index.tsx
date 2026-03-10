@@ -21,13 +21,14 @@ export const Gallery = ({ images }: GalleryProps) => {
                 <div className={styles.mainImageWrapper}>
                     <img 
                         src={images[activeIndex].url} 
-                        alt={images[activeIndex].caption || "Project view"} 
+                        alt={images[activeIndex].alt || "Project view"} 
                         key={activeIndex} 
                         className={styles.fadeIn}
                     />
                 </div>
-                {images[activeIndex].caption && (
-                    <p className={styles.mainCaption}>{images[activeIndex].caption}</p>
+                {/* Aqui voltamos a mostrar o texto dinâmico usando o .alt */}
+                {images[activeIndex].alt && (
+                    <p className={styles.mainCaption}>{images[activeIndex].alt}</p>
                 )}
             </div>
 

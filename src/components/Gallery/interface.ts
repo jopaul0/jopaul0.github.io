@@ -1,3 +1,3 @@
 export interface GalleryProps {
-    images: { url: string; caption?: string }[];
+    images: { url: string; alt?: string }[];
 }
