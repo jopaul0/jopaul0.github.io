@@ -126,16 +126,16 @@
     },
     "images": [
       {
+        "url": "https://raw.githubusercontent.com/jopaul0/cfpratico/main/docs/screenshots/web.gif",
+        "alt": "Web"
+      },
+      {
         "url": "https://raw.githubusercontent.com/jopaul0/cfpratico/main/docs/screenshots/android.gif",
         "alt": "Android App"
       },
       {
         "url": "https://raw.githubusercontent.com/jopaul0/cfpratico/main/docs/screenshots/desktop.png",
         "alt": "Desktop App"
-      },
-      {
-        "url": "https://raw.githubusercontent.com/jopaul0/cfpratico/main/docs/screenshots/web.gif",
-        "alt": "Web"
       }
     ]
   }
