@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import styles from './Modal.module.scss';
 import type { ModalProps } from './interface';
 
-export const Modal = ({ isOpen, onClose, title, children, noHeader = false }: ModalProps) => {
+export const Modal = ({ isOpen, onClose, title, children, noHeader = false, footer }: ModalProps) => {
   const [shouldRender, setShouldRender] = useState(isOpen);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -24,10 +24,6 @@ export const Modal = ({ isOpen, onClose, title, children, noHeader = false }: Mo
       return () => clearTimeout(timer);
     }
   }, [isOpen, shouldRender]);
-
-  useEffect(() => {
-    return () => { document.body.style.overflow = 'unset'; };
-  }, []);
 
   if (!shouldRender) return null;
 
@@ -51,6 +47,12 @@ export const Modal = ({ isOpen, onClose, title, children, noHeader = false }: Mo
         <div className={styles.content}>
           {children}
         </div>
+        
+        {footer && (
+            <footer className={styles.footer}>
+                {footer}
+            </footer>
+        )}
       </div>
     </div>,
     document.body

@@ -6,4 +6,5 @@ export interface ModalProps {
     isOpen: boolean;
     noHeader?: boolean;
     title?: string;
+    footer?: ReactNode;
 }

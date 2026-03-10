@@ -104,3 +104,10 @@
   margin-top: 48px;
   width: 100%;
 }
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
