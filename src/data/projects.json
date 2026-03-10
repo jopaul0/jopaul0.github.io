@@ -1,0 +1,142 @@
+[
+  {
+    "id": "sama",
+    "title": "SAMA",
+    "short_description": "Sistema de gestão de atestados médicos e gerenciamento de equipes ágeis.",
+    "full_description": "O SAMA é um sistema para envio de atestados médicos e avaliações de equipes ágeis, ele facilita a gestão de documentos médicos e o acompanhamento do desempenho de times, garantindo maior transparência e eficiência no processo.",
+    "technologies": [
+      "Python",
+      "Flask",
+      "JavaScript",
+      "Bootstrap"
+    ],
+    "links": {
+      "github": "https://github.com/jopaul0/sama",
+      "video": "https://drive.google.com/file/d/1yhL3QTFPQqRvMhVtk6LwgWhd_UeKy8lJ/view",
+      "demo": "https://sama-api-bc5t.onrender.com/"
+    },
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/sama/main/docs/screenshots/home.png",
+        "alt": "Home"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/sama/main/docs/screenshots/register-users.png",
+        "alt": "Cadastro de usuários"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/sama/main/docs/screenshots/dashboard.png",
+        "alt": "Dashboard"
+      }
+    ]
+  },
+  {
+    "id": "pdi",
+    "title": "PDI",
+    "short_description": "App Java Desktop desenvolvido para otimizar o processo de criação e gestão de planos de desenvolvimento individual.",
+    "full_description": "Este programa foi desenvolvido para otimizar o processo de criação e gestão de planos de desenvolvimento individual (PDIs). Ele oferece uma solução centralizada para líderes que buscam estruturar, monitorar e alcançar metas de crescimento de forma eficiente, promovendo uma cultura de melhoria contínua e desenvolvimento de competências.",
+    "technologies": [
+      "Java",
+      "JavaFX",
+      "MySQL"
+    ],
+    "links": {
+      "github": "https://github.com/jopaul0/pdi",
+      "video": "",
+      "demo": ""
+    },
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/pdi/main/docs/screenshots/login.png",
+        "alt": "Login"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/pdi/main/docs/screenshots/collaborators.png",
+        "alt": "Tela de Colaboradores"
+      }
+    ]
+  },
+  {
+    "id": "blog-generator-wp",
+    "title": "Blog Generator for WP",
+    "short_description": "Plugin WordPress para a geração de blogs.",
+    "full_description": "O Blog Generator é uma solução profissional para WordPress que automatiza a criação de artigos completos (Título, Conteúdo, Resumo, SEO e Tags) via Google Gemini API.",
+    "technologies": [
+      "PHP",
+      "WordPress",
+      "Gemini API"
+    ],
+    "links": {
+      "github": "https://github.com/jopaul0/blog-generator-wp-plugin",
+      "video": "",
+      "demo": ""
+    },
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/blog-generator-wp-plugin/main/docs/screenshots/form-generator.png",
+        "alt": "Formulário"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/blog-generator-wp-plugin/main/docs/screenshots/settings.png",
+        "alt": "Configurações"
+      }
+    ]
+  },
+  {
+    "id": "cantinaonline",
+    "title": "CantinaOnline+",
+    "short_description": "Sistema que gerencia e torna possível compras de produtos online na cantina da escola",
+    "full_description": "CantinaOnline+ é um sistema desenvolvido como projeto de TCC para o curso Técnico em Informática. Seu objetivo é possibilitar a gestão e a realização de compras online na cantina escolar, facilitando o atendimento e a organização dos pedidos.",
+    "technologies": [
+      "PHP",
+      "MySQL",
+      "JavaScript",
+      "Bootstrap"
+    ],
+    "links": {
+      "github": "https://github.com/jopaul0/cantinaonline-tcc",
+      "video": "https://drive.google.com/file/d/1LH1A1rWwAm5pE_VVdAxRxdb-YdBoqIxJ/view",
+      "demo": ""
+    },
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/cantinaonline-tcc/main/docs/screenshots/home.png",
+        "alt": "Home"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/cantinaonline-tcc/main/docs/screenshots/login.png",
+        "alt": "Login"
+      }
+    ]
+  },
+  {
+    "id": "cfpratico",
+    "title": "CF Prático",
+    "short_description": "Plataforma de controle financeiro pessoal, com versões para desktop, web e mobile.",
+    "full_description": "O CF Prático é uma suíte completa de controle financeiro desenvolvida para pequenas empresas, autônomos e microempreendedores que precisam de uma ferramenta rápida, intuitiva e que funcione mesmo sem internet.",
+    "technologies": [
+      "React",
+      "React Native",
+      "TypeScript"
+    ],
+    "links": {
+      "github": "https://github.com/jopaul0/cfpratico",
+      "video": "",
+      "demo": "https://cfpratico.onvale.com.br"
+    },
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/cfpratico/main/docs/screenshots/android.gif",
+        "alt": "Android App"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/cfpratico/main/docs/screenshots/desktop.png",
+        "alt": "Desktop App"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/jopaul0/cfpratico/main/docs/screenshots/web.gif",
+        "alt": "Web"
+      }
+    ]
+  }
+]
