@@ -1,17 +1,20 @@
 export interface ProjectImage {
   url: string;
-  caption?: string;
+  alt: string;
+}
+
+export interface ProjectLinks {
+  github: string;
+  video?: string;
+  demo?: string;
 }
 
 export interface ProjectData {
-  id: number | string;
-  name: string;
-  repoName: string; 
-  shortDesc: string;
-  fullDesc: string;
-  techs: string[];
-  github: string;
-  demo?: string;
-  banner: string;
+  id: string;
+  title: string;
+  short_description: string;
+  full_description: string;
+  technologies: string[];
+  links: ProjectLinks;
   images: ProjectImage[]; 
 }
