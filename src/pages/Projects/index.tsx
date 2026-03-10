@@ -5,9 +5,9 @@ import { Modal } from '@/components/Modal';
 import { SimpleButton } from '@/components/SimpleButton';
 import { Section } from '@/components/Section';
 import type { ProjectData } from './interface';
-
 import projectsData from '@/data/projects.json';
 import { Gallery } from '@/components/Gallery';
+import { StatusBadge } from '@/components/StatusBadge';
 
 export const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
@@ -25,6 +25,31 @@ export const Projects = () => {
     };
 
     const visibleProjects = (projectsData as ProjectData[]).slice(0, visibleCount);
+
+    const modalFooter = displayedProject ? (
+        <>
+            {displayedProject.links?.github && (
+                <SimpleButton
+                    label="Ver no GitHub"
+                    onClick={() => window.open(displayedProject.links.github, '_blank')}
+                />
+            )}
+            {displayedProject.links?.demo && (
+                <SimpleButton
+                    outline
+                    label="Visualizar Demo"
+                    onClick={() => window.open(displayedProject.links.demo, '_blank')}
+                />
+            )}
+            {displayedProject.links?.video && (
+                <SimpleButton
+                    outline
+                    label="Ver Vídeo"
+                    onClick={() => window.open(displayedProject.links.video, '_blank')}
+                />
+            )}
+        </>
+    ) : null;
 
     return (
         <Section id="projetos">
@@ -45,7 +70,7 @@ export const Projects = () => {
                             onClick={() => handleOpen(project)}
                         >
                             <div className={styles.imagePreview}>
-                                <img src={bannerUrl} alt={project.title} className={styles.bannerImg} />
+                                {bannerUrl && <img src={bannerUrl} alt={project.title} className={styles.bannerImg} />}
                             </div>
                             <div className={styles.content}>
                                 <h3 className={styles.name}>{project.title}</h3>
@@ -70,6 +95,7 @@ export const Projects = () => {
                 isOpen={!!selectedProject}
                 onClose={handleClose}
                 title={displayedProject?.title ?? ''}
+                footer={modalFooter}
             >
                 {displayedProject && (
                     <div className={styles.modalGallery}>
@@ -78,39 +104,18 @@ export const Projects = () => {
 
                         <p className={styles.shortDesc}>{displayedProject.full_description}</p>
 
-                        {/* Renderiza as Tecnologias */}
-                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-                            <strong>Tecnologias:</strong> {displayedProject.technologies.join(', ')}
-                        </p>
-
-
-
-                        <div className={styles.actions}>
-                            {displayedProject.links?.github && (
-                                <SimpleButton
-                                    label="Ver no GitHub"
-                                    onClick={() => window.open(displayedProject.links.github, '_blank')}
+                        <div className={styles.techList}>
+                            {displayedProject.technologies.map((tech, index) => (
+                                <StatusBadge
+                                    key={index}
+                                    label={tech}
+                                    noDot={true}
+                                    interactive={true}
                                 />
-                            )}
-
-                            {/* Renderiza o botão Demo apenas se o link não estiver vazio */}
-                            {displayedProject.links?.demo && (
-                                <SimpleButton
-                                    outline
-                                    label="Visualizar Demo"
-                                    onClick={() => window.open(displayedProject.links.demo, '_blank')}
-                                />
-                            )}
-
-                            {/* Renderiza o botão Vídeo apenas se o link não estiver vazio */}
-                            {displayedProject.links?.video && (
-                                <SimpleButton
-                                    outline
-                                    label="Ver Vídeo"
-                                    onClick={() => window.open(displayedProject.links.video, '_blank')}
-                                />
-                            )}
+                            ))}
                         </div>
+
+
                     </div>
                 )}
             </Modal>
