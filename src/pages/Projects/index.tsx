@@ -53,7 +53,7 @@ export const Projects = () => {
 
     return (
         <Section id="projetos">
-            <SectionTitle number="04 — PROJETOS" title={<>O que <em>construí</em></>} />
+            <SectionTitle number="03 — PROJETOS" title={<>O que <em>construí</em></>} />
 
             <div className={styles.projectsGrid}>
                 {visibleProjects.map((project, index) => {

@@ -31,7 +31,6 @@ export const Navbar = () => {
 
       <ul className={styles.navLinks}>
         <li><NavLink href="#sobre">SOBRE</NavLink></li>
-        <li><NavLink href="#formacao">FORMAÇÃO</NavLink></li>
         <li><NavLink href="#experiencia">EXPERIÊNCIA</NavLink></li>
         <li><NavLink href="#projetos">PROJETOS</NavLink></li>
         <li><NavLink href="#contato">CONTATO</NavLink></li>

@@ -1,7 +1,31 @@
 [
     {
+    "period": "Jan 2022 — Dez 2024",
+    "role": "Estudante Técnico em Informática",
+    "company": "Colégio Técnico Opção",
+    "desc": "Aluno do Ensino Médio Técnico em Informática, com foco em desenvolvimento de software, manutenção de computadores e redes.",
+    "techs": [
+            "PHP",
+            "Arduíno",
+            "Manutenção",
+            "Redes"
+        ]
+    },
+    {
+    "period": "Jan 2025 — Atual",
+    "role": "Estudante de Análise e Desenvolvimento de Sistemas",
+    "company": "Fatec São José dos Campos",
+    "desc": "Aluno do Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas, com foco em desenvolvimento web, banco de dados e metodologias ágeis.",
+    "techs": [
+            "Scrum",
+            "Typescript",
+            "SO",
+            "Banco de Dados"
+        ]
+    },
+    {
     "period": "Maio 2025 — Dezembro 2025",
-    "role": "Estagiário",
+    "role": "Estagiário de TI / Marketing",
     "company": "OnVale Contabilidade",
     "desc": "Responsável pela manutenção de máquinas, desenvolvimento de sites em WordPress, criação de aplicações em JavaScript e suporte em marketing digital.",
     "techs": [
