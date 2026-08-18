@@ -27,13 +27,13 @@ export const Hero = () => {
         />
 
         <h1 className={styles.heroTitle}>
-          Full Stack <br />
+          Software <br />
           <span className={styles.highlight}>Developer.</span>
         </h1>
 
         <p className={styles.heroDesc}>
-          Desenvolvendo soluções <strong>escaláveis</strong> com foco em arquitetura <strong>Backend</strong>.
-          Estudante de ADS dedicado ao domínio da linguagem <strong>Java</strong> e sistemas robustos.
+          Desenvolvendo soluções <strong>escaláveis</strong> com foco em lógica de programação.
+          Estudante de ADS dedicado ao <strong>domínio da tecnologia e sistemas robustos.</strong>
         </p>
 
         <div className={styles.heroButtons}>
